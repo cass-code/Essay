@@ -18,7 +18,7 @@ Logo_width: 0.3 # If using a logo - use this to set width (size) of image
 Entry3: "\\textbf{Jessica van der Berg - 20190565}"
 Entry4: "\\textbf{Laura Meyer - 20748302}"
 Entry5: "\\textbf{Cassandra Pengelly - 20346212}"
-Entry6: "18 October 2021 | Word Count: 2980"
+Entry6: "18 October 2021 | Word Count: 1980"
 # Entry7:
 # Entry8:
 
@@ -106,23 +106,29 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width 
 
 # Introduction \label{intro} 
 
-Every day people, firms and governments have to make decisions, and often their decisions depend on other people's decisions. For example, it's only useful for people and firms to accept the Rand as money, if other people and firms accept the Rand as money. Economists have long been interested in modelling human behaviour, and game theory has been developed as a tool to help us better understand situations where people interact with one another and make decisions [@book p.1]. One example of where game theory can be applied to explain how we make decisions is deadline adherence. At some stage in their lives, every person has had to submit an assignment, an essay or a report by some deadline. Game theory can offer insights as to when a person should submit work on time or late, even when there is incomplete information.
+The relationship between a supervisor and a subordinate have been studied extensively [@power],[ @comm], [@trust]. A subordinate’s action is often influenced by the behaviour of the supervisor. Identity-based motivation theory describes that a positive relationship of trust and leniency between a subordinate and a supervisor will ultimately lead to both parties being better off in terms of reaching their goals, performance, and mental health [@trust]. Game theory models have been used to analyze the interactions between a supervisor and a subordinate [@book p.1]. A common situation that arises is a subordinate being assigned a task that should be complete before a deadline. Game theory can offer insights as to when a subordinate should submit a task on time or miss the deadline if there is incomplete information.
 
-We investigate a case where a student is required to hand in an assignment but experiences a crisis before the deadline, and has to choose whether to submit her assignment on time or to hand in late. We impose a structure of continuous types for both players, with a discrete set of actions. This essay is structured as follows: section \ref{lit} briefly discusses the literature on games of incomplete information and some applications. Section \ref{game} presents the deadline adherence game theory model; and section \ref{result} analyses the results of the game. The final section concludes (\ref{con}).
+This article contributes to the existing literature by analyzing the dynamic relationship between a student and a lecturer.  We investigate a case where a student is required to submit an assignment with a deadline restriction but experiences a crisis before the deadline and must choose whether to submit her assignment on time or miss the deadline. We impose a structure of continuous types for both players, with a discrete set of actions. This essay is structured as follows: section \ref{lit} briefly discusses the literature on games of incomplete information and some applications. Section \ref{game} presents the deadline adherence game theory model; and section \ref{result} analyses the results of the game. The final section concludes \ref{con}.
 
 # Games of Incomplete Information \label{lit} 
 
-We follow the approach of @harsanyi in applying a game theoretic model of incomplete information, where players have less than full information about each others' payoff functions. Based on the Bayesian methodology, the two players have expectations in the form of subjective probability distributions. We use a lottery to assign types to players, before any moves are made in the game. The two players then try to estimate the probability of each others’ types, subject to the information that is commonly available. In order to solve the model, the game of incomplete information will be reinterpreted as a game with complete and imperfect information, by transforming the basic mathematical structure. 
+Real-life situations often lack full information @2020games. Von Neumann and Morgenstern [\textcolor{blue}{1944: 30} cited in @2004com] first used the term \emph{incomplete information} to a game theory model in which parts of the normal form structure is unspecified.  However, Von Neumann and Morgenstern [\textcolor{blue}{1944: 30} cited in @2004com] deemed any further research into this model as unimportant. Disagreeing @luce1956 extended on the literature on incomplete information by assuming that each player has a perception, which could be correct or incorrect, of the payoff function of the other player. However, @luce1956 did not consider uncertainty about strategies.  @harsanyi addressed the concerns of @luce1956 by developing a general analytical framework to analyze games of incomplete information. 
+
+We follow the approach of @harsanyi in applying a game-theoretic model of incomplete information, where players have less than full information about each other’s payoff functions. Based on the Bayesian methodology, both players have expectations in the form of subjective probability distributions. Players have different types, which are randomly assigned and represents their belief about the game being played. However, players do not know the type of the other player @2020games. Both players attempt to estimate the probability of each other’s types, subject to the available information. To solve the model, the game of incomplete information will be reinterpreted as a game with complete and imperfect information, by transforming the basic mathematical structure.
 
 
 # A Model of Deadline Adherence \label{game}
 
-A student receives an assignment, which is due by a certain date set by the lecturer. While the student is working on the assignment, she undergoes a crisis and therefore spends less time on the assignment. She has two options: she can hand in the assignment on time or she can hand in late. If she hands in on time, she will get a payoff of $a-c$, where $a$ is the potential mark she would have received, and $c$ is the negative impact the crisis has on her mark. However, if she submits her project late, she has some time to recover after the crisis and reduce its academic impact. Her payoff is $a-\beta c -m$ if the lecturer gives her a penalty, where $m$ is the size of the penalty. She gets a payoff of $a-\beta c$ if there is no penalty. $\beta$ represents the type of the student, where a high $\beta$ suggests a low resiliency to crises and a low $\beta$ suggests a high resiliency and a better academic recovery.
+A student receives an assignment, which is due by a certain date set by the lecturer. While the student is working on the assignment, she undergoes a crisis and therefore spends less time on the assignment. She has two options: she can hand in the assignment on time or she can hand in late. If she hands in on time, she will get a payoff of $a-c$, where $a$ is the potential mark she would have received, and $c$ is the negative impact the crisis has on her mark. However, if she submits her project late, she has some time to recover after the crisis and reduce its academic impact. Her payoff is $a-\beta c -m$ if the lecturer gives her a penalty, where $m$ is the size of the penalty. She gets a payoff of $a-\beta c$ if there is no penalty. $\beta$ represents the type of the student, where a high $\beta$ suggests a low resiliency to crises and a low $\beta$ suggests a high resiliency and a better academic recovery. The student observes her own type but does not know the lecturer's type.
 
-On the other hand the lecturer is faced with the decision either to give a penalty ($m$) if a student submits late or not to give a penalty. If the lecturer gives a penalty, he feels bad since the student experienced a crisis. The size of this disutility depends on the size of the penalty and how empathetic the lecturer is - the lecturer's type ($\delta$). The more empathetic the lecturer is, the higher $\delta$ is. The lecturer's and student's types are independently and randomly chosen by nature at the start of the game from a uniform distribution
-^[A uniform distribution puts equal chance on any of the outcomes between 0 and 1 happening.]: $\delta \sim {\sf Uniform}$ and $\beta \sim {\sf Uniform}$. If the lecturer
+On the other hand, the lecturer is faced with the decision either to give a penalty ($m$) if a student submits late or not to give a penalty. If the lecturer gives a penalty, he feels bad since the student has gone through a crisis. The size of his disutility depends on the size of the penalty ($m$) and how empathetic the lecturer is, where the level of empathy describes the lecturer's type ($\delta$). The more empathetic the lecturer is, the higher $\delta$ is. The lecturer observes his own type but not that of the student. The lecturer's and student's types are both continuous types, which are independently and randomly chosen by nature at the start of the game from a uniform distribution^[A uniform distribution puts equal chance on any of the outcomes between 0 and 1 happening.]: $\delta \sim Uniform(0,1)$ and $\beta \sim Uniform(0,1)$. If the lecturer decides not to impose a penalty, he feels good that he did not impose on a student experiencing a crisis, and gets a positive payoff of $\delta c$. However, the lecturer knows that by waving the penalty, he may be encouraging this student, and other students to hand in late in the future. The lecturer would rather deter late hand-ins, and receives a negative payoff $-d$ for not deterring late hand-ins. This deterrent parameter relates to the literature on games of repeated interaction and reputations. 
 
-A summary of the game's parameter's and restrictions are shown in figure \ref{sum} below.
+The parameters $a,\, c,\, m\, \&\, d$ are all common knowledge. This is a game of incomplete information because the players' types are not common knowledge. The type spaces are continuous and the action spaces are discrete. Each player needs to choose his/her action based on his/her own type, what each believes the other player's type is, and the values of $a,\, c,\, m\, \&\, d$. Figure \ref{Figure1} shows the game in extensive form^[The simultaneous form game can be found in the appendix, \ref{tab1}]. And a summary of the game's parameters and restrictions are given in figure \ref{sum} below.
+
+```{r Figure1,  warning =  FALSE, fig.align = 'center', fig.cap = "This game is a dynamic game where nature first chooses the student's and lecturer's types. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. \\label{Figure1}", fig.ext = 'png', fig.height = 3, fig.width = 4}
+library(knitr)  
+include_graphics("img/tree.jpg")
+```
 
 ```{r sum, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
 
@@ -130,7 +136,8 @@ library(xtable)
 source("code/game_summary.R")
 data<- game_summary()
 
-table <- xtable(data, caption = "Summary of Game Parameters \\label{sum}")
+
+table <- xtable(data, caption = "Game Parameters \\label{sum}")
   print.xtable(table,
              # tabular.environment = "longtable",
              floating = TRUE,
@@ -139,47 +146,31 @@ table <- xtable(data, caption = "Summary of Game Parameters \\label{sum}")
              comment = FALSE,
              caption.placement = 'bottom',
              include.rownames = FALSE,
+             sanitize.text.function=function(x){x},
              booktabs = T # Aesthetics
              )
 
 ```
 
-<!-- The game starts off with nature randomly selecting the student's type ($\beta$), where $\beta \in [0,1]$ and the lecturer's type ($\delta \in [0,1]$). Each player knows her own type but not the type of the other player, making this a game of incomplete information. The order of play is as follows: the student moves first and can choose to hand in her assignment on time or late. Should she hand in on time, the game terminates. But if the student hands in late, the lecturer decides whether to impose a penalty or not to impose a penalty the student. -->
-
-Figure \ref{tab1} shows the game in simultaneous format.
-
-```{r tab1, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
-
-library(xtable)
-source("code/simul.R")
-data<- simul()
-
-table <- xtable(data, caption = "Simultaneous Game \\label{tab1}")
-  print.xtable(table,
-             # tabular.environment = "longtable",
-             floating = TRUE,
-             table.placement = 'H',
-             # scalebox = 0.3,
-             comment = FALSE,
-             caption.placement = 'bottom',
-             include.rownames = TRUE,
-             booktabs = T # Aesthetics
-             )
-
-```
-
-Figure \ref{Figure1} shows the game below in extensive form:
-
-```{r Figure1,  warning =  FALSE, fig.align = 'center', fig.cap = "Game Tree \\label{Figure1}", fig.ext = 'png', fig.height = 3, fig.width = 4}
-library(knitr)  
-include_graphics("img/tree.png")
-```
 
 # Results and Discussion \label{result}
  
- BR interperet
- Faults with game
- Run different examples
+ Solving this game yields the following best response functions:
+ 
+ For the student
+ 
+<!--  We can deÖne this as a strategy si(θi) that maps some -->
+<!-- θi 2 [0, 1] onto a corresponding e§ort ei 2 f0, 1g. Hence, -->
+<!-- si(θi) will return either a 0 (shirk) or 1 (contribute) depending -->
+<!-- on what value of θi -->
+<!-- is chosen as player 1ís type. -->
+<!-- Why arenít we mapping θj on to this function? Player i -->
+<!-- cannot observe player jís type. -->
+
+<!--  Model an everyday situation using games of incomplete information to demonstrate how -->
+<!-- strategic thinking can help us better understand individual behaviour. -->
+<!--  Faults with game -->
+<!--  Run different examples -->
 
 
 ```{r tab2, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
@@ -229,13 +220,37 @@ Extensions, generality
 
 # Appendix \label{app1} {-}
 
-## Payoffs
+## Simultaneous form \label{sim} {-}
+
+```{r tab1, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
+
+library(xtable)
+source("code/simul.R")
+data<- simul()
+
+
+table <- xtable(data, caption = "Simultaneous Game \\label{tab1}")
+  print.xtable(table,
+             # tabular.environment = "longtable",
+             floating = TRUE,
+             table.placement = 'H',
+             # scalebox = 0.3,
+             comment = FALSE,
+             caption.placement = 'bottom',
+             include.rownames = TRUE,
+             sanitize.text.function=function(x){x},
+             booktabs = T # Aesthetics
+             )
+
+```
+
+## Payoffs label{payoff} {-}
 
 __Student payoffs:__
 \begin{align*}
 E[\text{On Time}]&= a- c \\
-E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta C) \\
-&=-m p+a-\beta C
+E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta c) \\
+&=-m p+a-\beta c
 \end{align*}
 Student plays on time if:
 \begin{align*}
@@ -267,9 +282,11 @@ Lecturer gives no penalty if:
 \delta &\geq \frac{d}{c+m} \\
 \delta &\geq \bar{\delta} \\
 \end{align*}
+
+## Best Responses \label{br} {-}
 Solving for the best responses:
 \begin{align*}
-\therefore p=\bar{\delta}=\operatorname{Prob}(\delta<\bar{\delta})
+p=\text{Probability that the lecturer gives a penalty} = \bar{\delta}=\operatorname{Prob}(\delta<\bar{\delta})
 \end{align*}
 Substitute into the student's best response function - student hands in on time if:
 \begin{align*}{}
@@ -282,4 +299,15 @@ c-m \bar{\delta} \leq c \\
 -m \bar{\delta} \leq 0 \\
 0 \leq \bar{\delta}
 \end{align*}{}
-Since $0 \leq \bar{\delta} \leq 1$, this condition will always hold. 
+Since $0 \leq \bar{\delta} \leq 1$, this condition will always hold.
+$\beta$ cannot be less than 0:
+\begin{align*}
+\frac{c-m \bar{\delta}}{c}&<0 \\
+c-m \bar{\delta}&<0 \\
+-m \bar{\delta}&< -c \\
+\bar{\delta}&>\frac{c}{m}
+\end{align*}
+if $\bar{\delta}>\frac{c}{m} \Rightarrow \beta=0$, otherwise:
+\begin{align*}
+\beta =\frac{c-m \bar{\delta}}{c}
+\end{align*}
