@@ -406,29 +406,50 @@ $a$ & Potential assignment mark & $0\leq a \leq 1$ \\
 \label{result}}{Results and Discussion }}\label{results-and-discussion}}
 
 In order to understand how the lecturer and student will make their
-decisions, we need to solve for the Bayesian Nash Equilibrium (BNE). By
-accounting for the beliefs that each player holds about the others'
-type, we can find their best response functions, set them equal and find
-the solution strategies\footnote{For a full derivation of the solution
-  concepts, please see Appendix \ref{B}}:
+decisions given their beliefs, we need to solve for their best responses
+and understand the parameters that guide their responses..
+
+Best response function for the student: \begin{align*}
+B R_{\beta}(\bar{\delta})=\left\{\begin{array}{lll}
+\frac{c-m\bar{\delta}}{c} & \text { if } & \bar{\delta}\leq \frac{c}{m} \\
+0 & \text { if } & \bar{\delta}> \frac{c}{m}
+\end{array}\right.
+\end{align*}
+
+The student's best response function tells us that
+
+Best response function for the lecturer: \begin{align*}
+B R_{\delta}(\delta)=\left\{\begin{array}{lll}
+0 & \text { if } & \delta<\frac{d}{c+m} \\
+1 & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
+\end{align*}
+
+If we want to understand the outcome of the game, we need to solve for
+the Bayesian Nash Equilibrium (BNE). We can do this by equating their
+best response functions, and finding the solution strategies\footnote{For
+  a full derivation of the solution concepts, please see the appendix
+  (\ref{B})}:
 
 For the student, her BNE strategy is: \begin{align*}
 s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
 \text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c}  \\
-\text{Late} & \text{if} & \beta \leqslant 1-\frac{m d}{c^{2}+m c} 
+\text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c} 
 \end{array}\right.
 \end{align*}
 
 And the lecturer's BNE strategy is: \begin{align*}
-s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
-\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m} \label{eq2}
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
 \end{array}\right.
 \end{align*}
 
-From \ref{eq1} when the student is playing her equilibrium strategy, she
-wants to hand in on time if she has a resiliency level that is quite
-low, which equates to a \(\beta\) value exceeding some threshold
+When the student is playing her equilibrium strategy, she wants to hand
+in on time if she has a resiliency level that is quite low, which
+equates to a \(\beta\) value exceeding some threshold.
+
+A numerical example of the game follows:
 
 \begin{table}[H]
 \centering
@@ -458,7 +479,7 @@ Best Response & Late & Penalty \\
 \section{\texorpdfstring{Conclusion
 \label{con}}{Conclusion }}\label{conclusion}}
 
-Extensions, generality \newpage
+Extensions, generality Shortcomings \newpage
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -602,8 +623,9 @@ B R_{\delta}(\delta)=\left\{\begin{array}{lll}
 \end{align*}
 
 \hypertarget{bayesian-nash-equilibrium}{%
-\subsection{\texorpdfstring{Bayesian Nash Equilibrium
-\label{bay}{-}}{Bayesian Nash Equilibrium }}\label{bayesian-nash-equilibrium}}
+\subsection*{\texorpdfstring{Bayesian Nash Equilibrium
+\label{bay}}{Bayesian Nash Equilibrium }}\label{bayesian-nash-equilibrium}}
+\addcontentsline{toc}{subsection}{Bayesian Nash Equilibrium \label{bay}}
 
 The Bayesian Nash equilibrium occurs at the point where the best
 response functions intersect. For the BRFs to cross: \begin{align*}
@@ -613,10 +635,10 @@ response functions intersect. For the BRFs to cross: \begin{align*}
 \end{align*} BNE strategy for the student \begin{align*}
 s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
 \text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c} \\
-\text{Late} & \text{if} & \beta \leqslant 1-\frac{m d}{c^{2}+m c}
+\text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c}
 \end{array}\right.
 \end{align*} BNE strategy for the lecturer \begin{align*}
-s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
 \text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
 \end{array}\right.

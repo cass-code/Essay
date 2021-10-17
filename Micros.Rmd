@@ -154,25 +154,45 @@ table <- xtable(data, caption = "Game Parameters \\label{sum}")
 
 # Results and Discussion \label{result}
  
-In order to understand how the lecturer and student will make their decisions, we need to solve for the Bayesian Nash Equilibrium (BNE). By accounting for the beliefs that each player holds about the others' type, we can find their best response functions, set them equal and find the solution strategies^[For a full derivation of the solution concepts, please see Appendix \ref{B}]: 
+In order to understand how the lecturer and student will make their decisions given their beliefs, we need to solve for their best responses and understand the parameters that guide their responses.. 
+
+Best response function for the student:
+\begin{align*}
+B R_{\beta}(\bar{\delta})=\left\{\begin{array}{lll}
+\frac{c-m\bar{\delta}}{c} & \text { if } & \bar{\delta}\leq \frac{c}{m} \\
+0 & \text { if } & \bar{\delta}> \frac{c}{m}
+\end{array}\right.
+\end{align*}
+
+The student's best response function tells us that 
+
+Best response function for the lecturer:
+\begin{align*}
+B R_{\delta}(\delta)=\left\{\begin{array}{lll}
+0 & \text { if } & \delta<\frac{d}{c+m} \\
+1 & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
+\end{align*}
+
+If we want to understand the outcome of the game, we need to solve for the Bayesian Nash Equilibrium (BNE). We can do this by equating their best response functions, and finding the solution strategies^[For a full derivation of the solution concepts, please see the appendix (\ref{B})]: 
 
 For the student, her BNE strategy is: 
 \begin{align*}
 s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
 \text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c}  \\
-\text{Late} & \text{if} & \beta \leqslant 1-\frac{m d}{c^{2}+m c} 
+\text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c} 
 \end{array}\right.
 \end{align*}
  
 And the lecturer's BNE strategy is: 
 \begin{align*}
-s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
-\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m} \label{eq2}
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
 \end{array}\right.
 \end{align*}
- 
-From \ref{eq1} when the student is playing her equilibrium strategy, she wants to hand in on time if she has a resiliency level that is quite low, which equates to a $\beta$ value exceeding some threshold
+  
+When the student is playing her equilibrium strategy, she wants to hand in on time if she has a resiliency level that is quite low, which equates to a $\beta$ value exceeding some threshold.
  
  
 <!--  We can deÖne this as a strategy si(θi) that maps some -->
@@ -187,7 +207,7 @@ From \ref{eq1} when the student is playing her equilibrium strategy, she wants t
 <!-- strategic thinking can help us better understand individual behaviour. -->
 <!--  Faults with game -->
 <!--  Run different examples -->
-
+A numerical example of the game follows:
 
 ```{r tab2, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
 
@@ -226,6 +246,7 @@ table <- xtable(data, caption = "Simultaneous Game Best Response \\label{tab2}")
 # Conclusion \label{con}
 
 Extensions, generality
+Shortcomings
 \newpage
 
 # References {-}
@@ -342,7 +363,7 @@ B R_{\delta}(\delta)=\left\{\begin{array}{lll}
 \end{array}\right.
 \end{align*}
 
-## Bayesian Nash Equilibrium \label{bay}{-}
+## Bayesian Nash Equilibrium \label{bay} {-}
 The Bayesian Nash equilibrium occurs at the point where the best response functions intersect.
 For the BRFs to cross:
 \begin{align*}
@@ -354,12 +375,12 @@ BNE strategy for the student
 \begin{align*}
 s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
 \text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c} \\
-\text{Late} & \text{if} & \beta \leqslant 1-\frac{m d}{c^{2}+m c}
+\text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c}
 \end{array}\right.
 \end{align*}
 BNE strategy for the lecturer
 \begin{align*}
-s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
 \text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
 \end{array}\right.
