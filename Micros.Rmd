@@ -119,8 +119,8 @@ We follow the approach of @harsanyi in applying a game theoretic model of incomp
 
 A student receives an assignment, which is due by a certain date set by the lecturer. While the student is working on the assignment, she undergoes a crisis and therefore spends less time on the assignment. She has two options: she can hand in the assignment on time or she can hand in late. If she hands in on time, she will get a payoff of $a-c$, where $a$ is the potential mark she would have received, and $c$ is the negative impact the crisis has on her mark. However, if she submits her project late, she has some time to recover after the crisis and reduce its academic impact. Her payoff is $a-\beta c -m$ if the lecturer gives her a penalty, where $m$ is the size of the penalty. She gets a payoff of $a-\beta c$ if there is no penalty. $\beta$ represents the type of the student, where a high $\beta$ suggests a low resiliency to crises and a low $\beta$ suggests a high resiliency and a better academic recovery.
 
-On the other hand the lecturer is faced with the decision either to give a penalty ($m$) if a student submits late or not to give a penalty. If the lecturer gives a penalty, he feels bad since the student experienced a crisis. The size of this disutility depends on the size of the penalty and how empathetic the lecturer is - the lecturer's type ($\delta$). The more empathetic the lecturer is, the higher $\delta$ is. The lecturer's and student's types are independently and randomly chosen by nature at the start of the game from a uniform distribution
-^[A uniform distribution puts equal chance on any of the outcomes between 0 and 1 happening.]: $\delta \sim {\sf Uniform}$ and $\beta \sim {\sf Uniform}$. If the lecturer
+On the other hand, the lecturer is faced with the decision either to give a penalty ($m$) if a student submits late or not to give a penalty. If the lecturer gives a penalty, he feels bad since the student has gone through a crisis. The size of his disutility depends on the size of the penalty ($m$) and how empathetic the lecturer is, where the level of empathy describes the lecturer's type ($\delta$). The more empathetic the lecturer is, the higher $\delta$ is. The lecturer's and student's types are independently and randomly chosen by nature at the start of the game from a uniform distribution
+^[A uniform distribution puts equal chance on any of the outcomes between 0 and 1 happening.]: $\delta \sim Uniform$ and $\beta \sim Uniform$. If the lecturer decides not to impose a penalty,
 
 A summary of the game's parameter's and restrictions are shown in figure \ref{sum} below.
 
@@ -130,7 +130,8 @@ library(xtable)
 source("code/game_summary.R")
 data<- game_summary()
 
-table <- xtable(data, caption = "Summary of Game Parameters \\label{sum}")
+
+table <- xtable(data, caption = "Game Parameters \\label{sum}")
   print.xtable(table,
              # tabular.environment = "longtable",
              floating = TRUE,
@@ -139,9 +140,18 @@ table <- xtable(data, caption = "Summary of Game Parameters \\label{sum}")
              comment = FALSE,
              caption.placement = 'bottom',
              include.rownames = FALSE,
+             sanitize.text.function=function(x){x},
              booktabs = T # Aesthetics
              )
 
+```
+
+```{r, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
+
+library(xtable)
+adf.results<-matrix(0,ncol=6,nrow=4)
+colnames(adf.results) <- c(" ", "$m^r_t$", "$\\delta p_t$","$R^r_t$", "$R^b_t$", "$y^r_t$")
+print(xtable(adf.results),sanitize.text.function=function(x){x})
 ```
 
 <!-- The game starts off with nature randomly selecting the student's type ($\beta$), where $\beta \in [0,1]$ and the lecturer's type ($\delta \in [0,1]$). Each player knows her own type but not the type of the other player, making this a game of incomplete information. The order of play is as follows: the student moves first and can choose to hand in her assignment on time or late. Should she hand in on time, the game terminates. But if the student hands in late, the lecturer decides whether to impose a penalty or not to impose a penalty the student. -->
@@ -154,6 +164,7 @@ library(xtable)
 source("code/simul.R")
 data<- simul()
 
+
 table <- xtable(data, caption = "Simultaneous Game \\label{tab1}")
   print.xtable(table,
              # tabular.environment = "longtable",
@@ -163,6 +174,7 @@ table <- xtable(data, caption = "Simultaneous Game \\label{tab1}")
              comment = FALSE,
              caption.placement = 'bottom',
              include.rownames = TRUE,
+             sanitize.text.function=function(x){x},
              booktabs = T # Aesthetics
              )
 
@@ -172,7 +184,7 @@ Figure \ref{Figure1} shows the game below in extensive form:
 
 ```{r Figure1,  warning =  FALSE, fig.align = 'center', fig.cap = "Game Tree \\label{Figure1}", fig.ext = 'png', fig.height = 3, fig.width = 4}
 library(knitr)  
-include_graphics("img/tree.png")
+include_graphics("img/tree.jpg")
 ```
 
 # Results and Discussion \label{result}
@@ -229,13 +241,13 @@ Extensions, generality
 
 # Appendix \label{app1} {-}
 
-## Payoffs
+## Payoffs label{payoff} {-}
 
 __Student payoffs:__
 \begin{align*}
 E[\text{On Time}]&= a- c \\
-E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta C) \\
-&=-m p+a-\beta C
+E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta c) \\
+&=-m p+a-\beta c
 \end{align*}
 Student plays on time if:
 \begin{align*}
@@ -267,9 +279,11 @@ Lecturer gives no penalty if:
 \delta &\geq \frac{d}{c+m} \\
 \delta &\geq \bar{\delta} \\
 \end{align*}
+
+## Best Responses \label{br} {-}
 Solving for the best responses:
 \begin{align*}
-\therefore p=\bar{\delta}=\operatorname{Prob}(\delta<\bar{\delta})
+p=\text{Probability that the lecturer gives a penalty} = \bar{\delta}=\operatorname{Prob}(\delta<\bar{\delta})
 \end{align*}
 Substitute into the student's best response function - student hands in on time if:
 \begin{align*}{}
@@ -282,4 +296,15 @@ c-m \bar{\delta} \leq c \\
 -m \bar{\delta} \leq 0 \\
 0 \leq \bar{\delta}
 \end{align*}{}
-Since $0 \leq \bar{\delta} \leq 1$, this condition will always hold. 
+Since $0 \leq \bar{\delta} \leq 1$, this condition will always hold.
+$\beta$ cannot be less than 0:
+\begin{align*}
+\frac{c-m \bar{\delta}}{c}&<0 \\
+c-m \bar{\delta}&<0 \\
+-m \bar{\delta}&< -c \\
+\bar{\delta}&>\frac{c}{m}
+\end{align*}
+if $\bar{\delta}>\frac{c}{m} \Rightarrow \beta=0$, otherwise:
+\begin{align*}
+\beta =\frac{c-m \bar{\delta}}{c}
+\end{align*}
