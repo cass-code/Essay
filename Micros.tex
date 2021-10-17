@@ -314,18 +314,17 @@ represents the type of the student, where a high \(\beta\) suggests a
 low resiliency to crises and a low \(\beta\) suggests a high resiliency
 and a better academic recovery.
 
-On the other hand, the lecturer is faced with the decision either to
-give a penalty (\(m\)) if a student submits late or not to give a
-penalty. If the lecturer gives a penalty, he feels bad since the student
-has gone through a crisis. The size of his disutility depends on the
-size of the penalty (\(m\)) and how empathetic the lecturer is, where
-the level of empathy describes the lecturer's type (\(\delta\)). The
-more empathetic the lecturer is, the higher \(\delta\) is. The
+On the other hand the lecturer is faced with the decision either to give
+a penalty (\(m\)) if a student submits late or not to give a penalty. If
+the lecturer gives a penalty, he feels bad since the student experienced
+a crisis. The size of this disutility depends on the size of the penalty
+and how empathetic the lecturer is - the lecturer's type (\(\delta\)).
+The more empathetic the lecturer is, the higher \(\delta\) is. The
 lecturer's and student's types are independently and randomly chosen by
 nature at the start of the game from a uniform distribution:\footnote{A
   uniform distribution puts equal chance on any of the outcomes between
-  0 and 1 happening.} \(\delta \sim Uniform\) and
-\(\beta \sim Uniform\). If the lecturer decides not to impose a penalty,
+  0 and 1 happening.} \(\delta \sim {\sf Uniform}\) and
+\(\beta \sim {\sf Uniform}\). If the lecturer
 
 A summary of the game's parameter's and restrictions are shown in figure
 \ref{sum} below.
@@ -334,34 +333,17 @@ A summary of the game's parameter's and restrictions are shown in figure
 \centering
 \begin{tabular}{lll}
   \toprule
-Parameter & Parameter Represents & Restriction \\ 
+Parameter & Parameter Represents & Range \\ 
   \midrule
-$a$ & Potential assignment mark & $0\leq a \leq 1$ \\ 
-  $c$ & Cost of crisis to assignment mark & $0 < c \leq 1$ \\ 
-  $\beta$ & Student's type: level of resiliency & $\beta \sim Uniform$  \\ 
-  $m$ & Mark penalty & $0 < m \leq 1$ \\ 
-  $\delta$ & Lecturer's type: level of empathy & $\delta \sim Uniform$ \\ 
-  $d$ & Late deterrment utility & $0<d \leq 1$ \\ 
+a & Potential assignment mark & 0$<$=a=$<$1 \\ 
+  c & Cost of crisis to assignment mark & 0$<$c=$<$1 \\ 
+  B & Student's type: level of resiliency & 0$<$=B=$<$1 \\ 
+  m & Mark penalty & 0$<$m=$<$1 \\ 
+  D & Lecturer's type: level of empathy & 0$<$=D=$<$1 \\ 
+  d & Late deterrment utility & 0=$<$d=$<$1 \\ 
    \bottomrule
 \end{tabular}
-\caption{Game Parameters \label{sum}} 
-\end{table}
-
-\% latex table generated in R 4.0.4 by xtable 1.8-4 package \% Sun Oct
-17 14:46:31 2021
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{rrrrrrr}
-  \hline
- &   & $m^r_t$ & $\delta p_t$ & $R^r_t$ & $R^b_t$ & $y^r_t$ \\ 
-  \hline
-1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  2 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  3 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  4 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-   \hline
-\end{tabular}
+\caption{Summary of Game Parameters \label{sum}} 
 \end{table}
 
 Figure \ref{tab1} shows the game in simultaneous format.
@@ -372,8 +354,8 @@ Figure \ref{tab1} shows the game in simultaneous format.
   \toprule
  & Penalty & No Penalty \\ 
   \midrule
-On Time & $a-c, \ 0$ & $a-c, \ 0$ \\ 
-  Late & $a-\beta c - m, \ \delta m$ & $a-\beta c, \ \delta c -d$ \\ 
+On Time & a-c, 0 & a-c, 0 \\ 
+  Late & a-B(c) - m, D(m) & a-B(c), D(c)-d \\ 
    \bottomrule
 \end{tabular}
 \caption{Simultaneous Game \label{tab1}} 
@@ -383,7 +365,7 @@ Figure \ref{Figure1} shows the game below in extensive form:
 
 \begin{figure}[H]
 
-{\centering \includegraphics{img/tree} 
+{\centering \includegraphics[width=4.74in]{img/tree} 
 
 }
 
@@ -450,14 +432,13 @@ Oxford university press New York.
 \label{app1}}{Appendix }}\label{appendix}}
 \addcontentsline{toc}{section}{Appendix \label{app1}}
 
-\hypertarget{payoffs-labelpayoff}{%
-\subsection*{Payoffs label\{payoff\}}\label{payoffs-labelpayoff}}
-\addcontentsline{toc}{subsection}{Payoffs label\{payoff\}}
+\hypertarget{payoffs}{%
+\subsection{Payoffs}\label{payoffs}}
 
 \textbf{Student payoffs:} \begin{align*}
 E[\text{On Time}]&= a- c \\
-E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta c) \\
-&=-m p+a-\beta c
+E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta C) \\
+&=-m p+a-\beta C
 \end{align*} Student plays on time if: \begin{align*}
 a-c>a-m p-\beta c \\
 \beta c>c-m p \\
@@ -478,15 +459,8 @@ d&>\delta(c+m) \\
 \end{align*} Lecturer gives no penalty if: \begin{align*}
 \delta &\geq \frac{d}{c+m} \\
 \delta &\geq \bar{\delta} \\
-\end{align*}
-
-\hypertarget{best-responses}{%
-\subsection*{\texorpdfstring{Best Responses
-\label{br}}{Best Responses }}\label{best-responses}}
-\addcontentsline{toc}{subsection}{Best Responses \label{br}}
-
-Solving for the best responses: \begin{align*}
-p=\text{Probability that the lecturer gives a penalty} = \bar{\delta}=\operatorname{Prob}(\delta<\bar{\delta})
+\end{align*} Solving for the best responses: \begin{align*}
+\therefore p=\bar{\delta}=\operatorname{Prob}(\delta<\bar{\delta})
 \end{align*} Substitute into the student's best response function -
 student hands in on time if: \begin{align*}{}
 \beta>\frac{c-m(\bar{\delta})}{c}
@@ -497,15 +471,7 @@ c-m \bar{\delta} \leq c \\
 -m \bar{\delta} \leq 0 \\
 0 \leq \bar{\delta}
 \end{align*}{} Since \(0 \leq \bar{\delta} \leq 1\), this condition will
-always hold. \(\beta\) cannot be less than 0: \begin{align*}
-\frac{c-m \bar{\delta}}{c}&<0 \\
-c-m \bar{\delta}&<0 \\
--m \bar{\delta}&< -c \\
-\bar{\delta}&>\frac{c}{m}
-\end{align*} if \(\bar{\delta}>\frac{c}{m} \Rightarrow \beta=0\),
-otherwise: \begin{align*}
-\beta =\frac{c-m \bar{\delta}}{c}
-\end{align*}
+always hold.
 
 \bibliography{Tex/ref}
 
