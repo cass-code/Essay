@@ -333,16 +333,16 @@ the lecturer. While the student is working on the assignment, she
 undergoes a crisis and therefore spends less time on the assignment. She
 has two options: she can hand in the assignment on time or she can hand
 in late. If she hands in on time, she will get a payoff of \(a-c\),
-where \(a\) is the potential mark she would have received, and \(c\) is
-the negative impact the crisis has on her mark. However, if she submits
-her project late, she has some time to recover after the crisis and
-reduce its academic impact. Her payoff is \(a-\beta c -m\) if the
-lecturer gives her a penalty, where \(m\) is the size of the penalty.
-She gets a payoff of \(a-\beta c\) if there is no penalty. \(\beta\)
-represents the type of the student, where a high \(\beta\) suggests a
-low resiliency to crises and a low \(\beta\) suggests a high resiliency
-and a better academic recovery. The student observes her own type but
-does not know the lecturer's type.
+where \(a\) is the potential pre-crisis mark, and \(c\) is the negative
+impact the crisis has on her mark. However, if she submits her project
+late, she has some time to recover after the crisis and reduce its
+academic impact. Her payoff is \(a-\beta c -m\) if the lecturer gives
+her a penalty, where \(m\) is the size of the penalty. She gets a payoff
+of \(a-\beta c\) if there is no penalty. \(\beta\) represents the type
+of the student, where a high \(\beta\) suggests a low resiliency to
+crises and a low \(\beta\) suggests a high resiliency and a better
+academic recovery. The student observes her own type but does not know
+the lecturer's type.
 
 On the other hand, the lecturer is faced with the decision either to
 give a penalty (\(m\)) if a student submits late or not to give a
@@ -395,7 +395,7 @@ $a$ & Potential assignment mark & $0\leq a \leq 1$ \\
   $\beta$ & Student's type: level of resiliency & $\beta \sim Uniform(0,1)$  \\ 
   $m$ & Mark penalty & $0 < m \leq 1$ \\ 
   $\delta$ & Lecturer's type: level of empathy & $\delta \sim Uniform(0,1)$ \\ 
-  $d$ & Late deterrment utility & $0<d \leq 1$ \\ 
+  $d$ & Detterent & $0<d \leq 1$ \\ 
    \bottomrule
 \end{tabular}
 \caption{Game Parameters \label{sum}} 
@@ -405,9 +405,30 @@ $a$ & Potential assignment mark & $0\leq a \leq 1$ \\
 \section{\texorpdfstring{Results and Discussion
 \label{result}}{Results and Discussion }}\label{results-and-discussion}}
 
-Solving this game yields the following best response functions:
+In order to understand how the lecturer and student will make their
+decisions, we need to solve for the Bayesian Nash Equilibrium (BNE). By
+accounting for the beliefs that each player holds about the others'
+type, we can find their best response functions, set them equal and find
+the solution strategies\footnote{For a full derivation of the solution
+  concepts, please see Appendix \ref{B}}:
 
-For the student
+For the student, her BNE strategy is: \begin{align*}
+s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+\text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c}  \\
+\text{Late} & \text{if} & \beta \leqslant 1-\frac{m d}{c^{2}+m c} 
+\end{array}\right.
+\end{align*}
+
+And the lecturer's BNE strategy is: \begin{align*}
+s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+\text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m} \label{eq2}
+\end{array}\right.
+\end{align*}
+
+From \ref{eq1} when the student is playing her equilibrium strategy, she
+wants to hand in on time if she has a resiliency level that is quite
+low, which equates to a \(\beta\) value exceeding some threshold
 
 \begin{table}[H]
 \centering
@@ -489,15 +510,10 @@ Universit{é} Toulouse III-Paul Sabatier.
 
 \newpage
 
-\hypertarget{appendix}{%
-\section*{\texorpdfstring{Appendix
-\label{app1}}{Appendix }}\label{appendix}}
-\addcontentsline{toc}{section}{Appendix \label{app1}}
-
-\hypertarget{simultaneous-form}{%
-\subsection*{\texorpdfstring{Simultaneous form
-\label{sim}}{Simultaneous form }}\label{simultaneous-form}}
-\addcontentsline{toc}{subsection}{Simultaneous form \label{sim}}
+\hypertarget{appendix-a}{%
+\section*{\texorpdfstring{Appendix A
+\label{A}}{Appendix A }}\label{appendix-a}}
+\addcontentsline{toc}{section}{Appendix A \label{A}}
 
 \begin{table}[H]
 \centering
@@ -509,14 +525,20 @@ On Time & $a-c, \ 0$ & $a-c, \ 0$ \\
   Late & $a-\beta c - m, \ \delta m$ & $a-\beta c, \ \delta c -d$ \\ 
    \bottomrule
 \end{tabular}
-\caption{Simultaneous Game \label{tab1}} 
+\caption{Strategic form of the game \label{tab1}} 
 \end{table}
 
-\hypertarget{payoffs-labelpayoff}{%
-\subsection*{Payoffs label\{payoff\}}\label{payoffs-labelpayoff}}
-\addcontentsline{toc}{subsection}{Payoffs label\{payoff\}}
+\hypertarget{appendix-b}{%
+\section*{\texorpdfstring{Appendix B
+\label{B}}{Appendix B }}\label{appendix-b}}
+\addcontentsline{toc}{section}{Appendix B \label{B}}
 
-\textbf{Student payoffs:} \begin{align*}
+\hypertarget{payoffs}{%
+\subsection*{\texorpdfstring{Payoffs
+\label{payoff}}{Payoffs }}\label{payoffs}}
+\addcontentsline{toc}{subsection}{Payoffs \label{payoff}}
+
+Student payoffs: \begin{align*}
 E[\text{On Time}]&= a- c \\
 E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta c) \\
 &=-m p+a-\beta c
@@ -526,7 +548,7 @@ a-c>a-m p-\beta c \\
 \beta>\frac{c-m p}{c}
 \end{align*} Student plays late if: \begin{align*}
 \beta<\frac{c-m p}{c}
-\end{align*} \textbf{Lecturer Payoffs:} \begin{align*}
+\end{align*} Lecturer Payoffs: \begin{align*}
 E[\text{Penalty}]&=q(-\delta m)+(1-q)(0) \\
 &=q(-\delta m) \\
 E[\text{No Penalty}] &=q(\delta c-d)+(1-a)(0) \\
@@ -567,6 +589,37 @@ c-m \bar{\delta}&<0 \\
 \end{align*} if \(\bar{\delta}>\frac{c}{m} \Rightarrow \beta=0\),
 otherwise: \begin{align*}
 \beta =\frac{c-m \bar{\delta}}{c}
+\end{align*} Best response function for the student: \begin{align*}
+B R_{\beta}(\bar{\delta})=\left\{\begin{array}{lll}
+\frac{c-m\bar{\delta}}{c} & \text { if } & \bar{\delta}\leq \frac{c}{m} \\
+0 & \text { if } & \bar{\delta}> \frac{c}{m}
+\end{array}\right.
+\end{align*} Best response function for the lecturer: \begin{align*}
+B R_{\delta}(\delta)=\left\{\begin{array}{lll}
+0 & \text { if } & \delta<\frac{d}{c+m} \\
+1 & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
+\end{align*}
+
+\hypertarget{bayesian-nash-equilibrium}{%
+\subsection{\texorpdfstring{Bayesian Nash Equilibrium
+\label{bay}{-}}{Bayesian Nash Equilibrium }}\label{bayesian-nash-equilibrium}}
+
+The Bayesian Nash equilibrium occurs at the point where the best
+response functions intersect. For the BRFs to cross: \begin{align*}
+\text{Substitute} \; \bar{\delta} &= \frac{d}{c+m} \; \text{into} \; \beta=\frac{c-m\bar{\delta}}{c} \\
+\text{Then:} \; \beta&=\frac{c}{c}-\frac{m}{c}\left(\frac{d}{c+m}\right) \\
+\beta&=1-\frac{m d}{c^{2}+m c} \\
+\end{align*} BNE strategy for the student \begin{align*}
+s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+\text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c} \\
+\text{Late} & \text{if} & \beta \leqslant 1-\frac{m d}{c^{2}+m c}
+\end{array}\right.
+\end{align*} BNE strategy for the lecturer \begin{align*}
+s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+\text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
 \end{align*}
 
 \bibliography{Tex/ref}
