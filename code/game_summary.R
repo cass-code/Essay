@@ -7,7 +7,7 @@ game_summary <- function(){
         # Common <- c("Yes", "Yes", "No-only known by student", "Yes", "No-only known by lecturer", "Yes")
         Restriction <- c("$0\\leq a \\leq 1$", "$0 < c \\leq 1$", "$\\beta \\sim Uniform(0,1)$ ", "$0 < m \\leq 1$", "$\\delta \\sim Uniform(0,1)$", "$0<d \\leq 1$")
 
-        frame <- data.frame(Parameter, Represents, Restriction) %>% rename("Parameter Represents" = Represents)
+        frame <- data.frame(Parameter, Represents, Restriction) %>% rename("Explanation" = Represents)
         frame
 
 }

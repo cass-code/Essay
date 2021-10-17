@@ -377,18 +377,18 @@ restrictions are given in figure \ref{sum} below.
 
 \begin{figure}[H]
 
-{\centering \includegraphics{img/tree} 
+{\centering \includegraphics{img/continuous} 
 
 }
 
-\caption{This game is a dynamic game where nature first chooses the student's and lecturer's types. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. \label{Figure1}}\label{fig:Figure1}
+\caption{This game is dynamic, where nature first chooses the student's and lecturer's types. The dashed line represents information only known by the lecturer and the solid line represents information only known by the student. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. \label{Figure1}}\label{fig:Figure1}
 \end{figure}
 
 \begin{table}[H]
 \centering
 \begin{tabular}{lll}
   \toprule
-Parameter & Parameter Represents & Restriction \\ 
+Parameter & Explanation & Restriction \\ 
   \midrule
 $a$ & Potential assignment mark & $0\leq a \leq 1$ \\ 
   $c$ & Cost of crisis to assignment mark & $0 < c \leq 1$ \\ 
@@ -406,78 +406,89 @@ $a$ & Potential assignment mark & $0\leq a \leq 1$ \\
 \label{result}}{Results and Discussion }}\label{results-and-discussion}}
 
 In order to understand how the lecturer and student will make their
-decisions given their beliefs, we need to solve for their best responses
-and understand the parameters that guide their responses..
+decisions given their beliefs, we need to solve for their best
+responses. A best response for the student would be to hand in on time
+if the expected payoff from handing in on time is higher than the
+expected payoff of submitting late. Defining \(p\) as the probability
+that the lecturer will give a penalty, a student should hand in on time
+where: \begin{align*}
+\beta>\frac{c-m p}{c}
+\end{align*} The right hand side is a constant\footnote{Since \(c\) and
+  \(m\) are known, and \(p\) is a belief the student holds.}. This
+implies that there is some threshold value of \(\beta\), for which a
+student should hand in on time. If the student believes that the
+lecturer will give no penalty (i.e.~\(p=0\)), then she should only hand
+in on time if \(\beta > \frac{c}{c} \Rightarrow \beta > 1\). Since
+\(\beta\) lies between \(0\) and \(1\), the inequality will never hold
+and she should always hand in late. From an intuitive stand point, this
+makes sense: a student can never do worse by handing in late if there is
+no penalty\footnote{Handing in late is weakly dominant.} but she will do
+better to hand in late if she is resilient in any way (\(\beta < 1\))
+and can partially recover from the crisis.
 
-Best response function for the student: \begin{align*}
-B R_{\beta}(\bar{\delta})=\left\{\begin{array}{lll}
-\frac{c-m\bar{\delta}}{c} & \text { if } & \bar{\delta}\leq \frac{c}{m} \\
-0 & \text { if } & \bar{\delta}> \frac{c}{m}
-\end{array}\right.
-\end{align*}
+However, if the student believes that the lecturer will give a penalty
+with some positive probability (\(p>0\)) then her decision to hand in on
+time depends on her level of resiliency, the magnitude of the crisis and
+the size of the penalty. As the cost of the crisis increases, the
+threshold value increases (ceteris paribus), and the student becomes
+more likely to hand in late (unless her she has a very low resiliency).
+If the mark penalty is high, the threshold value is smaller, and the
+student is more likely to hand in on time (unless is very resilient:
+\(\beta\) is very low). We can analyse the lecturer's best response rule
+similarly. The lecturer should impose a penalty where:\\
+\begin{align*}
+\delta<\frac{d}{c+m}
+\end{align*} The threshold value for the lecturer is the ratio between
+the deterrent factor and the sum of the crisis cost and the penalty
+mark. If the deterrent factor is high relative to the cost of crisis and
+the penalty mark, then the lecturer is more likely to give a penalty
+(unless he is highly empathetic). If the cost of the crisis large and
+the mark penalty is high relative to the deterrent factor, the lecturer
+is more likely to waive the penalty (unless he has very low empathy
+levels).
 
-The student's best response function tells us that
+While the best response analysis is useful, if we want to understand the
+outcome of the game and the player's strategies, we need to solve for
+the Bayesian Nash Equilibrium (BNE). The full derivations of the
+solution concepts are given in the appendix (\ref{B}).
 
-Best response function for the lecturer: \begin{align*}
-B R_{\delta}(\delta)=\left\{\begin{array}{lll}
-0 & \text { if } & \delta<\frac{d}{c+m} \\
-1 & \text { if } & \delta \geq \frac{d}{c+m}
-\end{array}\right.
-\end{align*}
-
-If we want to understand the outcome of the game, we need to solve for
-the Bayesian Nash Equilibrium (BNE). We can do this by equating their
-best response functions, and finding the solution strategies\footnote{For
-  a full derivation of the solution concepts, please see the appendix
-  (\ref{B})}:
-
-For the student, her BNE strategy is: \begin{align*}
+After observing her private type, the student chooses the following
+hand-in pattern:\\
+\begin{align*}
 s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
 \text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c}  \\
 \text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c} 
 \end{array}\right.
 \end{align*}
 
-And the lecturer's BNE strategy is: \begin{align*}
+And the lecturer's BNE strategy is given by: \begin{align*}
 s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
 \text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
 \end{array}\right.
 \end{align*}
 
-When the student is playing her equilibrium strategy, she wants to hand
-in on time if she has a resiliency level that is quite low, which
-equates to a \(\beta\) value exceeding some threshold.
-
-A numerical example of the game follows:
-
-\begin{table}[H]
-\centering
-\begin{tabular}{rll}
-  \toprule
- & Penalty & No Penalty \\ 
-  \midrule
-On Time & 0.65, 0 & 0.65, 0 \\ 
-  Late & 0.72, -0.01 & 0.77, -0.06 \\ 
-   \bottomrule
-\end{tabular}
-\caption{Simultaneous Game Best Response \label{tab2}} 
-\end{table}
-\begin{table}[H]
-\centering
-\begin{tabular}{rll}
-  \toprule
- & Student & Lecturer \\ 
-  \midrule
-Best Response & Late & Penalty \\ 
-   \bottomrule
-\end{tabular}
-\caption{Best Response\label{tab3}} 
-\end{table}
+When the lecturer and the student play their equilibrium strategies,
+neither has an incentive to deviate and we get a Bayesian Nash
+equilibrium. We would interpret the student's BNE strategy similarly to
+her best response; however, her strategy profile only depends on her own
+type and no longer on her beliefs about the lecturer's type. The
+lecturer's best response function and equilibrium strategy profile are
+the same because the lecturer observes whether the student hands in late
+or not and therefore has no need to hold beliefs about when the student
+will hand in.
 
 \hypertarget{conclusion}{%
 \section{\texorpdfstring{Conclusion
 \label{con}}{Conclusion }}\label{conclusion}}
+
+The results of the model are intuitive and provide a useful insight into
+how student's think about handing in assignments, and how lecturers
+respond to late submissions. One shortcoming of the model is its
+assumption that \(c\) is common knowledge. Although some lecturers are
+in touch with their students and would know whether they are
+experiencing a crisis and how impactful the crisis would be, most
+lecturers have too many students to know that information.
 
 Extensions, generality Shortcomings \newpage
 
@@ -602,7 +613,9 @@ c-m \bar{\delta} \leq c \\
 -m \bar{\delta} \leq 0 \\
 0 \leq \bar{\delta}
 \end{align*}{} Since \(0 \leq \bar{\delta} \leq 1\), this condition will
-always hold. \(\beta\) cannot be less than 0: \begin{align*}
+always hold.
+
+\(\beta\) cannot be less than 0: \begin{align*}
 \frac{c-m \bar{\delta}}{c}&<0 \\
 c-m \bar{\delta}&<0 \\
 -m \bar{\delta}&< -c \\
@@ -617,8 +630,8 @@ B R_{\beta}(\bar{\delta})=\left\{\begin{array}{lll}
 \end{array}\right.
 \end{align*} Best response function for the lecturer: \begin{align*}
 B R_{\delta}(\delta)=\left\{\begin{array}{lll}
-0 & \text { if } & \delta<\frac{d}{c+m} \\
-1 & \text { if } & \delta \geq \frac{d}{c+m}
+\text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
 \end{array}\right.
 \end{align*}
 
