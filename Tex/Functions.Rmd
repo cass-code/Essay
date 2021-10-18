@@ -1,0 +1,44 @@
+---
+title: "Functions"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A numerical example of the game follows:
+
+```{r tab2, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
+
+library(xtable)
+source("code/game.R")
+li <- game(a=0.8,c=0.15,B=0.2,D=0.2,m=0.05,d=0.09)
+data <-li[[1]] 
+br <- li[[2]]
+
+table <- xtable(data, caption = "Simultaneous Game Best Response \\label{tab2}")
+  print.xtable(table,
+             # tabular.environment = "longtable",
+             floating = TRUE,
+             table.placement = 'H',
+             # scalebox = 0.3,
+             comment = FALSE,
+             caption.placement = 'bottom',
+             include.rownames = TRUE,
+             booktabs = T # Aesthetics
+             )
+  
+  tab <- xtable(br, caption = "Best Response\\label{tab3}")
+  print.xtable(tab,
+             # tabular.environment = "longtable",
+             floating = TRUE,
+             table.placement = 'H',
+             # scalebox = 0.3,
+             comment = FALSE,
+             caption.placement = 'bottom',
+             include.rownames = TRUE,
+             booktabs = T # Aesthetics
+             )
+
+```

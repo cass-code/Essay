@@ -195,7 +195,7 @@ Adherence\par}}
     {\Large \textbf{Cassandra Pengelly - 20346212}\par}
     \vspace{1cm}
 %Date
-    {\Large 18 October 2021 \textbar{} Word Count: 2980}
+    {\Large 18 October 2021 \textbar{} Word Count: 1980}
 %More
     {\normalsize }
 %More
@@ -333,15 +333,16 @@ the lecturer. While the student is working on the assignment, she
 undergoes a crisis and therefore spends less time on the assignment. She
 has two options: she can hand in the assignment on time or she can hand
 in late. If she hands in on time, she will get a payoff of \(a-c\),
-where \(a\) is the potential mark she would have received, and \(c\) is
-the negative impact the crisis has on her mark. However, if she submits
-her project late, she has some time to recover after the crisis and
-reduce its academic impact. Her payoff is \(a-\beta c -m\) if the
-lecturer gives her a penalty, where \(m\) is the size of the penalty.
-She gets a payoff of \(a-\beta c\) if there is no penalty. \(\beta\)
-represents the type of the student, where a high \(\beta\) suggests a
-low resiliency to crises and a low \(\beta\) suggests a high resiliency
-and a better academic recovery.
+where \(a\) is the potential pre-crisis mark, and \(c\) is the negative
+impact the crisis has on her mark. However, if she submits her project
+late, she has some time to recover after the crisis and reduce its
+academic impact. Her payoff is \(a-\beta c -m\) if the lecturer gives
+her a penalty, where \(m\) is the size of the penalty. She gets a payoff
+of \(a-\beta c\) if there is no penalty. \(\beta\) represents the type
+of the student, where a high \(\beta\) suggests a low resiliency to
+crises and a low \(\beta\) suggests a high resiliency and a better
+academic recovery. The student observes her own type but does not know
+the lecturer's type.
 
 On the other hand, the lecturer is faced with the decision either to
 give a penalty (\(m\)) if a student submits late or not to give a
@@ -349,111 +350,147 @@ penalty. If the lecturer gives a penalty, he feels bad since the student
 has gone through a crisis. The size of his disutility depends on the
 size of the penalty (\(m\)) and how empathetic the lecturer is, where
 the level of empathy describes the lecturer's type (\(\delta\)). The
-more empathetic the lecturer is, the higher \(\delta\) is. The
-lecturer's and student's types are independently and randomly chosen by
-nature at the start of the game from a uniform distribution:\footnote{A
-  uniform distribution puts equal chance on any of the outcomes between
-  0 and 1 happening.} \(\delta \sim Uniform\) and
-\(\beta \sim Uniform\). If the lecturer decides not to impose a penalty,
+more empathetic the lecturer is, the higher \(\delta\) is. The lecturer
+observes his own type but not that of the student. The lecturer's and
+student's types are both continuous types, which are independently and
+randomly chosen by nature at the start of the game from a uniform
+distribution\footnote{A uniform distribution puts equal chance on any of
+  the outcomes between 0 and 1 happening.}: \(\delta \sim Uniform(0,1)\)
+and \(\beta \sim Uniform(0,1)\). If the lecturer decides not to impose a
+penalty, he feels good that he did not impose on a student experiencing
+a crisis, and gets a positive payoff of \(\delta c\). However, the
+lecturer knows that by waving the penalty, he may be encouraging this
+student, and other students to hand in late in the future. The lecturer
+would rather deter late hand-ins, and receives a negative payoff \(-d\)
+for not deterring late hand-ins. This deterrent parameter relates to the
+literature on games of repeated interaction and reputations.
 
-A summary of the game's parameter's and restrictions are shown in figure
-\ref{sum} below.
+The parameters \(a,\, c,\, m\, \&\, d\) are all common knowledge. This
+is a game of incomplete information because the players' types are not
+common knowledge. The type spaces are continuous and the action spaces
+are discrete. Each player needs to choose his/her action based on
+his/her own type, what each believes the other player's type is, and the
+values of \(a,\, c,\, m\, \&\, d\). Figure \ref{Figure1} shows the game
+in extensive form\footnote{The simultaneous form game can be found in
+  the appendix, \ref{tab1}}. And a summary of the game's parameters and
+restrictions are given in figure \ref{sum} below.
+
+\begin{figure}[H]
+
+{\centering \includegraphics{img/continuous} 
+
+}
+
+\caption{This game is dynamic, where nature first chooses the student's and lecturer's types. The dashed line represents information only known by the lecturer and the solid line represents information only known by the student. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. \label{Figure1}}\label{fig:Figure1}
+\end{figure}
 
 \begin{table}[H]
 \centering
 \begin{tabular}{lll}
   \toprule
-Parameter & Parameter Represents & Restriction \\ 
+Parameter & Explanation & Restriction \\ 
   \midrule
 $a$ & Potential assignment mark & $0\leq a \leq 1$ \\ 
   $c$ & Cost of crisis to assignment mark & $0 < c \leq 1$ \\ 
-  $\beta$ & Student's type: level of resiliency & $\beta \sim Uniform$  \\ 
+  $\beta$ & Student's type: level of resiliency & $\beta \sim Uniform(0,1)$  \\ 
   $m$ & Mark penalty & $0 < m \leq 1$ \\ 
-  $\delta$ & Lecturer's type: level of empathy & $\delta \sim Uniform$ \\ 
-  $d$ & Late deterrment utility & $0<d \leq 1$ \\ 
+  $\delta$ & Lecturer's type: level of empathy & $\delta \sim Uniform(0,1)$ \\ 
+  $d$ & Detterent & $0<d \leq 1$ \\ 
    \bottomrule
 \end{tabular}
 \caption{Game Parameters \label{sum}} 
 \end{table}
 
-\% latex table generated in R 4.0.5 by xtable 1.8-4 package \% Sun Oct
-17 15:12:10 2021
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{rrrrrrr}
-  \hline
- &   & $m^r_t$ & $\delta p_t$ & $R^r_t$ & $R^b_t$ & $y^r_t$ \\ 
-  \hline
-1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  2 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  3 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  4 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-Figure \ref{tab1} shows the game in simultaneous format.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{rll}
-  \toprule
- & Penalty & No Penalty \\ 
-  \midrule
-On Time & $a-c, \ 0$ & $a-c, \ 0$ \\ 
-  Late & $a-\beta c - m, \ \delta m$ & $a-\beta c, \ \delta c -d$ \\ 
-   \bottomrule
-\end{tabular}
-\caption{Simultaneous Game \label{tab1}} 
-\end{table}
-
-Figure \ref{Figure1} shows the game below in extensive form:
-
-\begin{figure}[H]
-
-{\centering \includegraphics[width=14.86in]{img/tree} 
-
-}
-
-\caption{Game Tree \label{Figure1}}\label{fig:Figure1}
-\end{figure}
-
 \hypertarget{results-and-discussion}{%
 \section{\texorpdfstring{Results and Discussion
 \label{result}}{Results and Discussion }}\label{results-and-discussion}}
 
-BR interperet Faults with game Run different examples
+In order to understand how the lecturer and student will make their
+decisions given their beliefs, we need to solve for their best
+responses. A best response for the student would be to hand in on time
+if the expected payoff from handing in on time is higher than the
+expected payoff of submitting late. Defining \(p\) as the probability
+that the lecturer will give a penalty, a student should hand in on time
+where: \begin{align*}
+\beta>\frac{c-m p}{c}
+\end{align*} The right hand side is a constant\footnote{Since \(c\) and
+  \(m\) are known, and \(p\) is a belief the student holds.}. This
+implies that there is some threshold value of \(\beta\), for which a
+student should hand in on time. If the student believes that the
+lecturer will give no penalty (i.e.~\(p=0\)), then she should only hand
+in on time if \(\beta > \frac{c}{c} \Rightarrow \beta > 1\). Since
+\(\beta\) lies between \(0\) and \(1\), the inequality will never hold
+and she should always hand in late. From an intuitive stand point, this
+makes sense: a student can never do worse by handing in late if there is
+no penalty\footnote{Handing in late is weakly dominant.} but she will do
+better to hand in late if she is resilient in any way (\(\beta < 1\))
+and can partially recover from the crisis.
 
-\begin{table}[H]
-\centering
-\begin{tabular}{rll}
-  \toprule
- & Penalty & No Penalty \\ 
-  \midrule
-On Time & 0.65, 0 & 0.65, 0 \\ 
-  Late & 0.72, -0.01 & 0.77, -0.06 \\ 
-   \bottomrule
-\end{tabular}
-\caption{Simultaneous Game Best Response \label{tab2}} 
-\end{table}
-\begin{table}[H]
-\centering
-\begin{tabular}{rll}
-  \toprule
- & Student & Lecturer \\ 
-  \midrule
-Best Response & Late & Penalty \\ 
-   \bottomrule
-\end{tabular}
-\caption{Best Response\label{tab3}} 
-\end{table}
+However, if the student believes that the lecturer will give a penalty
+with some positive probability (\(p>0\)) then her decision to hand in on
+time depends on her level of resiliency, the magnitude of the crisis and
+the size of the penalty. As the cost of the crisis increases, the
+threshold value increases (ceteris paribus), and the student becomes
+more likely to hand in late (unless her she has a very low resiliency).
+If the mark penalty is high, the threshold value is smaller, and the
+student is more likely to hand in on time (unless is very resilient:
+\(\beta\) is very low). We can analyse the lecturer's best response rule
+similarly. The lecturer should impose a penalty where:\\
+\begin{align*}
+\delta<\frac{d}{c+m}
+\end{align*} The threshold value for the lecturer is the ratio between
+the deterrent factor and the sum of the crisis cost and the penalty
+mark. If the deterrent factor is high relative to the cost of crisis and
+the penalty mark, then the lecturer is more likely to give a penalty
+(unless he is highly empathetic). If the cost of the crisis large and
+the mark penalty is high relative to the deterrent factor, the lecturer
+is more likely to waive the penalty (unless he has very low empathy
+levels).
+
+While the best response analysis is useful, if we want to understand the
+outcome of the game and the player's strategies, we need to solve for
+the Bayesian Nash Equilibrium (BNE). The full derivations of the
+solution concepts are given in the appendix (\ref{B}).
+
+After observing her private type, the student chooses the following
+hand-in pattern:\\
+\begin{align*}
+s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+\text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c}  \\
+\text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c} 
+\end{array}\right.
+\end{align*}
+
+And the lecturer's BNE strategy is given by: \begin{align*}
+s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
+\text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
+\end{align*}
+
+When the lecturer and the student play their equilibrium strategies,
+neither has an incentive to deviate and we get a Bayesian Nash
+equilibrium. We would interpret the student's BNE strategy similarly to
+her best response; however, her strategy profile only depends on her own
+type and no longer on her beliefs about the lecturer's type. The
+lecturer's best response function and equilibrium strategy profile are
+the same because the lecturer observes whether the student hands in late
+or not and therefore has no need to hold beliefs about when the student
+will hand in.
 
 \hypertarget{conclusion}{%
 \section{\texorpdfstring{Conclusion
 \label{con}}{Conclusion }}\label{conclusion}}
 
-Extensions, generality \newpage
+The results of the model are intuitive and provide a useful insight into
+how student's think about handing in assignments, and how lecturers
+respond to late submissions. One shortcoming of the model is its
+assumption that \(c\) is common knowledge. Although some lecturers are
+in touch with their students and would know whether they are
+experiencing a crisis and how impactful the crisis would be, most
+lecturers have too many students to know that information.
+
+Extensions, generality Shortcomings \newpage
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -505,16 +542,35 @@ Universit{é} Toulouse III-Paul Sabatier.
 
 \newpage
 
-\hypertarget{appendix}{%
-\section*{\texorpdfstring{Appendix
-\label{app1}}{Appendix }}\label{appendix}}
-\addcontentsline{toc}{section}{Appendix \label{app1}}
+\hypertarget{appendix-a}{%
+\section*{\texorpdfstring{Appendix A
+\label{A}}{Appendix A }}\label{appendix-a}}
+\addcontentsline{toc}{section}{Appendix A \label{A}}
 
-\hypertarget{payoffs-labelpayoff}{%
-\subsection*{Payoffs label\{payoff\}}\label{payoffs-labelpayoff}}
-\addcontentsline{toc}{subsection}{Payoffs label\{payoff\}}
+\begin{table}[H]
+\centering
+\begin{tabular}{rll}
+  \toprule
+ & Penalty & No Penalty \\ 
+  \midrule
+On Time & $a-c, \ 0$ & $a-c, \ 0$ \\ 
+  Late & $a-\beta c - m, \ \delta m$ & $a-\beta c, \ \delta c -d$ \\ 
+   \bottomrule
+\end{tabular}
+\caption{Strategic form of the game \label{tab1}} 
+\end{table}
 
-\textbf{Student payoffs:} \begin{align*}
+\hypertarget{appendix-b}{%
+\section*{\texorpdfstring{Appendix B
+\label{B}}{Appendix B }}\label{appendix-b}}
+\addcontentsline{toc}{section}{Appendix B \label{B}}
+
+\hypertarget{payoffs}{%
+\subsection*{\texorpdfstring{Payoffs
+\label{payoff}}{Payoffs }}\label{payoffs}}
+\addcontentsline{toc}{subsection}{Payoffs \label{payoff}}
+
+Student payoffs: \begin{align*}
 E[\text{On Time}]&= a- c \\
 E[\text{Late}]&=  p(a-\beta c-m) +(1-p)(a-\beta c) \\
 &=-m p+a-\beta c
@@ -524,7 +580,7 @@ a-c>a-m p-\beta c \\
 \beta>\frac{c-m p}{c}
 \end{align*} Student plays late if: \begin{align*}
 \beta<\frac{c-m p}{c}
-\end{align*} \textbf{Lecturer Payoffs:} \begin{align*}
+\end{align*} Lecturer Payoffs: \begin{align*}
 E[\text{Penalty}]&=q(-\delta m)+(1-q)(0) \\
 &=q(-\delta m) \\
 E[\text{No Penalty}] &=q(\delta c-d)+(1-a)(0) \\
@@ -557,7 +613,9 @@ c-m \bar{\delta} \leq c \\
 -m \bar{\delta} \leq 0 \\
 0 \leq \bar{\delta}
 \end{align*}{} Since \(0 \leq \bar{\delta} \leq 1\), this condition will
-always hold. \(\beta\) cannot be less than 0: \begin{align*}
+always hold.
+
+\(\beta\) cannot be less than 0: \begin{align*}
 \frac{c-m \bar{\delta}}{c}&<0 \\
 c-m \bar{\delta}&<0 \\
 -m \bar{\delta}&< -c \\
@@ -565,6 +623,38 @@ c-m \bar{\delta}&<0 \\
 \end{align*} if \(\bar{\delta}>\frac{c}{m} \Rightarrow \beta=0\),
 otherwise: \begin{align*}
 \beta =\frac{c-m \bar{\delta}}{c}
+\end{align*} Best response function for the student: \begin{align*}
+B R_{\beta}(\bar{\delta})=\left\{\begin{array}{lll}
+\frac{c-m\bar{\delta}}{c} & \text { if } & \bar{\delta}\leq \frac{c}{m} \\
+0 & \text { if } & \bar{\delta}> \frac{c}{m}
+\end{array}\right.
+\end{align*} Best response function for the lecturer: \begin{align*}
+B R_{\delta}(\delta)=\left\{\begin{array}{lll}
+\text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
+\end{align*}
+
+\hypertarget{bayesian-nash-equilibrium}{%
+\subsection*{\texorpdfstring{Bayesian Nash Equilibrium
+\label{bay}}{Bayesian Nash Equilibrium }}\label{bayesian-nash-equilibrium}}
+\addcontentsline{toc}{subsection}{Bayesian Nash Equilibrium \label{bay}}
+
+The Bayesian Nash equilibrium occurs at the point where the best
+response functions intersect. For the BRFs to cross: \begin{align*}
+\text{Substitute} \; \bar{\delta} &= \frac{d}{c+m} \; \text{into} \; \beta=\frac{c-m\bar{\delta}}{c} \\
+\text{Then:} \; \beta&=\frac{c}{c}-\frac{m}{c}\left(\frac{d}{c+m}\right) \\
+\beta&=1-\frac{m d}{c^{2}+m c} \\
+\end{align*} BNE strategy for the student \begin{align*}
+s_{\beta}^{*}(\beta)=\left\{\begin{array}{lll}
+\text{On time} & \text{if} & \beta>1-\frac{m d}{c^{2}+m c} \\
+\text{Late} & \text{if} & \beta \leq 1-\frac{m d}{c^{2}+m c}
+\end{array}\right.
+\end{align*} BNE strategy for the lecturer \begin{align*}
+s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
+\text{Penalty} & \text { if } & \delta<\frac{d}{c+m} \\
+\text{No penalty} & \text { if } & \delta \geq \frac{d}{c+m}
+\end{array}\right.
 \end{align*}
 
 \bibliography{Tex/ref}
