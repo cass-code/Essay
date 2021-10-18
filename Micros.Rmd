@@ -108,7 +108,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width 
 
 The relationship between a supervisor and a subordinate have been studied extensively [@power],[ @comm], [@trust]. A subordinate’s action is often influenced by the behaviour of the supervisor. Identity-based motivation theory describes that a positive relationship of trust and leniency between a subordinate and a supervisor will ultimately lead to both parties being better off in terms of reaching their goals, performance, and mental health [@trust]. Game theory models have been used to analyze the interactions between a supervisor and a subordinate [@book p.1]. A common situation that arises is a subordinate being assigned a task that should be complete before a deadline. Game theory can offer insights as to when a subordinate should submit a task on time or miss the deadline if there is incomplete information.
 
-This article contributes to the existing literature by analyzing the dynamic relationship between a student and a lecturer.  We investigate a case where a student is required to submit an assignment with a deadline restriction but experiences a crisis before the deadline and must choose whether to submit her assignment on time or miss the deadline. We impose a structure of continuous types for both players, with a discrete set of actions. This essay is structured as follows: section \ref{lit} briefly discusses the literature on games of incomplete information and some applications. Section \ref{game} presents the deadline adherence game theory model; and section \ref{result} analyses the results of the game. The final section concludes \ref{con}.
+This article contributes to the existing literature by analyzing the dynamic relationship between a student and a lecturer.  We investigate a case where a student is required to submit an assignment with a deadline restriction but experiences a crisis before the deadline and must choose whether to submit her assignment on time or miss the deadline. We impose a structure of continuous types for both players, with a discrete set of actions. This essay is structured as follows: section \ref{lit} briefly discusses the literature on games of incomplete information and some applications. Section \ref{game} presents the deadline adherence game theory model; and section \ref{result} analyses the results of the game. Section \ref{extension} provides a brief extension of the game and the final section concludes \ref{con}.
 
 # Games of Incomplete Information \label{lit} 
 
@@ -124,10 +124,10 @@ On the other hand, the lecturer is faced with the decision either to give a pena
 
 The parameters $a,\, c,\, m\, \&\, d$ are all common knowledge. This is a game of incomplete information because the players' types are not common knowledge. The type spaces are continuous and the action spaces are discrete. Each player needs to choose his/her action based on his/her own type, what each believes the other player's type is, and the values of $a,\, c,\, m\, \&\, d$. Figure \ref{Figure1} shows the game in extensive form^[The simultaneous form game can be found in the appendix, \ref{tab1}]. And a summary of the game's parameters and restrictions are given in figure \ref{sum} below.
 
-```{r Figure1,  warning =  FALSE, fig.align = 'center', fig.cap = "This game is dynamic, where nature first chooses the student's and lecturer's types. The dashed line represents information only known by the lecturer and the solid line represents information only known by the student. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. \\label{Figure1}", fig.ext = 'png', fig.height = 3, fig.width = 4}
-library(knitr)  
-include_graphics("img/continuous.jpg")
-```
+\includegraphics[scale=1.5]{"img/continuous.jpg"}
+\captionof{figure}{This game is dynamic, where nature first chooses the student's and lecturer's types. The dashed line represents information only known by the lecturer and the solid line represents information only known by the student. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. }
+\label{Figure1}
+
 
 ```{r sum, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
 
@@ -184,6 +184,37 @@ s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \end{align*}
   
 When the lecturer and the student play their equilibrium strategies, neither has an incentive to deviate and we get a Bayesian Nash equilibrium. We would interpret the student's BNE strategy similarly to her best response; however, her strategy profile only depends on her own type and no longer on her beliefs about the lecturer's type. The lecturer's best response function and equilibrium strategy profile are the same because the lecturer observes whether the student hands in late or not and therefore has no need to hold beliefs about when the student will hand in.
+
+# Extension \label{extension}
+
+We extend the game explained in section \ref{game} to account for grade inflation. The lecturer has an incentive to inflate the marks of the student since a higher grade is associated with the student giving a positive evaluation of the lecturer which could lead to an increase in salary and promotions. However, inflation the mark if ethically wrong therefore the lecturer incurs cost \(\gamma\) if he decides to inflate. If he decides to leave the mark unchanged, then he occurs a sympathy cost \(\delta\). A student experiences a cost of \(\omega\) for asking the lecturer and the lecturer experiences a cost of \(\phi\) of being bothered by the lecturer. 
+If the lecturer decides not to penalize the student, then he will never choose to inflate a students mark. Knowing this, a student that hands in late and receives no penalty will always accept his mark. If a student hands-on time, a lecture will always leave the mark unchanged at the request of the student, therefore the student will always accept the mark. 
+If the lecturer decides to penalize a late student, the lecturer will choose to inflate a student’s mark if the moral cost is smaller than the empathy cost the lecturer experiences. 
+\[\gamma < \delta m \]
+If the moral cost that the lecturer experiences is bigger than the empathy cost the lecturer experiences for giving a penalty, then the lecturer is strict, otherwise the lecturer is lenient. Therefore, a strict lecturer will not inflate a student mark but a lenient lecture will. 
+
+A summary of the game's parameter's and restrictions are shown in table \ref{table:ext} and the game is represented in Figure \ref{fig:extd}
+
+\begin{table}
+\caption{Extended Game Parameters}
+\centering
+\begin{tabular}{c c c} \hline
+Parameter & Explanation & Restrictions \\
+\hline 
+\(\omega\) & Exogenous cost of asking for the lecturer for higher mark & 0 < \(\omega\) $\le$ 1 \\
+\(\delta\) & Ethical cost of inflating students mark & 0 < \(\delta\) $\le$ 1 \\
+\(\phi\) & Cost of annoyance lecture experience for student bothering him & 0 <\(\phi\) $\le$ 1 \\
+x & Additional marks that student get when lecturer decides to inflates &  1 < x $\le$ 2 \\ [1ex]
+\hline 
+\end{tabular}
+\label{table:ext}
+\end{table}
+
+
+\includegraphics[scale=0.90]{"img/extend.jpg"}
+\captionof{figure}{This is an extended version of the game presented in Figure 3.1. To account for grade inflation, the student gets to accept the grade the lecturer game him, or reject the grade and ask the lecturer for a better mark. The lectuerer can then decided to inflate (I) the students mark or leave the mark unchanged (U). }
+\label{fig:extd}
+
 
 # Conclusion \label{con}
 The results of the model are intuitive and provide a useful insight into how student's think about handing in assignments, and how lecturers respond to late submissions. One shortcoming of the model is its assumption that $c$ is common knowledge. Although some lecturers are in touch with their students and would know whether they are experiencing a crisis and how impactful the crisis would be, most lecturers have too many students to know that information.
