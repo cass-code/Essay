@@ -1,5 +1,9 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$preprint, authoryear]{$documentclass$}
 
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
 \usepackage{lmodern}
 %%%% My spacing
 \usepackage{setspace}
@@ -151,7 +155,7 @@ $endif$
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newenvironment{CSLReferences}%
-  {\setlength{\parindent}{0pt}%
+  {\setlength{\parindent}{3pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
   {\par}
 
@@ -242,16 +246,16 @@ $if(Uni_Logo)$
 $endif$
 %Supervisor's Details
 \begin{center}
-    {\Large $Entry3$\par}
+    {\LARGE $Entry3$\par}
     \vspace{1cm}
 %Degree
-    {\Large $Entry4$\par}
+    {\LARGE $Entry4$\par}
     \vspace{1cm}
 %Institution
-    {\Large $Entry5$\par}
+    {\LARGE $Entry5$\par}
     \vspace{1cm}
 %Date
-    {\Large $Entry6$}
+    {\large $Entry6$}
 %More
     {\normalsize $Entry7$}
 %More

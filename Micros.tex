@@ -1,5 +1,9 @@
 \documentclass[11pt,preprint, authoryear]{elsarticle}
 
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
 \usepackage{lmodern}
 %%%% My spacing
 \usepackage{setspace}
@@ -118,7 +122,7 @@
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newenvironment{CSLReferences}%
-  {\setlength{\parindent}{0pt}%
+  {\setlength{\parindent}{3pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
   {\par}
 
@@ -186,16 +190,16 @@ Adherence\par}}
 \vspace{1cm}
 %Supervisor's Details
 \begin{center}
-    {\Large \textbf{Jessica van der Berg - 20190565}\par}
+    {\LARGE \textbf{Jessica van der Berg - 20190565}\par}
     \vspace{1cm}
 %Degree
-    {\Large \textbf{Laura Meyer - 20748302}\par}
+    {\LARGE \textbf{Laura Meyer - 20748302}\par}
     \vspace{1cm}
 %Institution
-    {\Large \textbf{Cassandra Pengelly - 20346212}\par}
+    {\LARGE \textbf{Cassandra Pengelly - 20346212}\par}
     \vspace{1cm}
 %Date
-    {\Large 18 October 2021 \textbar{} Word Count: 1980}
+    {\large 18 October 2021 \textbar{} Word Count: 1980}
 %More
     {\normalsize }
 %More
@@ -254,99 +258,99 @@ Adherence\par}}
 \section{\texorpdfstring{Introduction
 \label{intro}}{Introduction }}\label{introduction}}
 
-The relationship between a supervisor and a subordinate have been
-studied extensively (\protect\hyperlink{ref-power}{Conrad,
-1983}),(\protect\hyperlink{ref-comm}{Conrad, 1991}),
-(\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}). A subordinate's
-action is often influenced by the behaviour of the supervisor.
-Identity-based motivation theory describes that a positive relationship
+The relationship between a supervisor and a subordinate has been studied
+extensively in the social sciences
+(\protect\hyperlink{ref-power}{Conrad, 1983}),
+(\protect\hyperlink{ref-comm}{Conrad, 1991}),
+(\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}) and it's been found
+that a subordinate's action is often influenced by the behaviour of the
+supervisor. Identity-based motivation theory posits that a relationship
 of trust and leniency between a subordinate and a supervisor will
 ultimately lead to both parties being better off in terms of reaching
 their goals, performance, and mental health
 (\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}). Game theory models
-have been used to analyze the interactions between a supervisor and a
-subordinate (\protect\hyperlink{ref-book}{Osborne, 2004: 1}). A common
-situation that arises is a subordinate being assigned a task that should
-be complete before a deadline. Game theory can offer insights as to when
-a subordinate should submit a task on time or miss the deadline if there
-is incomplete information.
+provide a useful framework to analyze the interactions between a
+supervisor and a subordinate (\protect\hyperlink{ref-book}{Osborne,
+2004: 1}). A common situation that arises is a subordinate being
+assigned a task that should be complete before a deadline. Game theory
+can offer insights as to when a subordinate should submit a task on time
+or miss the deadline if there is incomplete information.
 
-This article contributes to the existing literature by analyzing the
-dynamic relationship between a student and a lecturer. We investigate a
-case where a student is required to submit an assignment with a deadline
-restriction but experiences a crisis before the deadline and must choose
-whether to submit her assignment on time or miss the deadline. We impose
-a structure of continuous types for both players, with a discrete set of
-actions. This essay is structured as follows: section \ref{lit} briefly
-discusses the literature on games of incomplete information and some
-applications. Section \ref{game} presents the deadline adherence game
-theory model; and section \ref{result} analyses the results of the game.
-Section \ref{extension} provides a brief extension of the game and the
-final section concludes \ref{con}.
+This article contributes to the literature on games of incomplete
+information, and dynamic interactions between students and lecturers. We
+investigate a case where a student is required to submit an assignment
+with by a certain deadline, but she experiences a crisis and must choose
+whether to submit her assignment on time or late. We impose a structure
+of continuous types for both players, with a discrete set of actions.
+This essay is organised as follows: section \ref{lit} briefly discusses
+the literature on games of incomplete information and some applications.
+Section \ref{game} presents our model of deadline adherence; and section
+\ref{result} analyses the results of the game. Section \ref{extension}
+provides an extension of the game and the final section concludes
+\ref{con}.
 
 \hypertarget{games-of-incomplete-information}{%
 \section{\texorpdfstring{Games of Incomplete Information
 \label{lit}}{Games of Incomplete Information }}\label{games-of-incomplete-information}}
 
-Real-life situations often lack full information
-\protect\hyperlink{ref-2020games}{Trabelsi}
-(\protect\hyperlink{ref-2020games}{2020}). Von Neumann and Morgenstern
-(\textcolor{blue}{1944: 30} cited in
-\protect\hyperlink{ref-2004com}{Myerson, 2004}) first used the term
-\emph{incomplete information} to a game theory model in which parts of
-the normal form structure is unspecified. However, Von Neumann and
-Morgenstern (\textcolor{blue}{1944: 30} cited in
-\protect\hyperlink{ref-2004com}{Myerson, 2004}) deemed any further
-research into this model as unimportant. Disagreeing
+In real-life situations, we often don't have full information before we
+make decisions \protect\hyperlink{ref-2020games}{Trabelsi}
+(\protect\hyperlink{ref-2020games}{2020}).
+\protect\hyperlink{ref-von}{Von Neumann \& Morgenstern}
+(\protect\hyperlink{ref-von}{1944: 30}) first used the term
+\emph{incomplete information} in reference to a game theory model in
+which parts of the normal form structure are unspecified. However, Von
+Neumann and Morgenstern deemed further research into such a model as
+unimportant (\protect\hyperlink{ref-2004com}{Myerson, 2004}).
 \protect\hyperlink{ref-luce1956}{Luce \& Adams}
-(\protect\hyperlink{ref-luce1956}{1956}) extended on the literature on
-incomplete information by assuming that each player has a perception,
-which could be correct or incorrect, of the payoff function of the other
-player. However, \protect\hyperlink{ref-luce1956}{Luce \& Adams}
-(\protect\hyperlink{ref-luce1956}{1956}) did not consider uncertainty
-about strategies. \protect\hyperlink{ref-harsanyi}{Harsanyi}
-(\protect\hyperlink{ref-harsanyi}{1995}) addressed the concerns of
-\protect\hyperlink{ref-luce1956}{Luce \& Adams}
-(\protect\hyperlink{ref-luce1956}{1956}) by developing a general
-analytical framework to analyze games of incomplete information.
+(\protect\hyperlink{ref-luce1956}{1956}) disagreed, and extended on the
+incomplete information literature by assuming that each player has a
+perception\footnote{This belief does not necessarily need to be correct}
+of the payoff function of the other player. However, games of incomplete
+information were practically difficult to solve until
+\protect\hyperlink{ref-harsanyi}{Harsanyi}
+(\protect\hyperlink{ref-harsanyi}{1995}) developed a general analytical
+framework.
 
 We follow the approach of \protect\hyperlink{ref-harsanyi}{Harsanyi}
 (\protect\hyperlink{ref-harsanyi}{1995}) in applying a game-theoretic
 model of incomplete information, where players have less than full
-information about each other's payoff functions. Based on the Bayesian
+information about each others payoff functions. Based on the Bayesian
 methodology, both players have expectations in the form of subjective
 probability distributions. Players have different types, which are
-randomly assigned and represents their belief about the game being
+randomly assigned and represent their belief about the game being
 played. However, players do not know the type of the other player
-\protect\hyperlink{ref-2020games}{Trabelsi}
-(\protect\hyperlink{ref-2020games}{2020}). Both players attempt to
-estimate the probability of each other's types, subject to the available
-information. To solve the model, the game of incomplete information will
-be reinterpreted as a game with complete and imperfect information, by
-transforming the basic mathematical structure.
+(\protect\hyperlink{ref-2020games}{Trabelsi, 2020}). Both players
+attempt to estimate the probability of each others types, subject to the
+available information. To solve the outcome of the model, the game of
+incomplete information will be reinterpreted as a game with complete and
+imperfect information, by transforming its basic mathematical structure.
 
 \hypertarget{a-model-of-deadline-adherence}{%
 \section{\texorpdfstring{A Model of Deadline Adherence
 \label{game}}{A Model of Deadline Adherence }}\label{a-model-of-deadline-adherence}}
 
-A student receives an assignment, which is due by a certain date set by
-the lecturer. While the student is working on the assignment, she
-undergoes a crisis and therefore spends less time on the assignment. She
-has two options: she can hand in the assignment on time or she can hand
-in late. If she hands in on time, she will get a payoff of \(a-c\),
-where \(a\) is the potential pre-crisis mark, and \(c\) is the negative
-impact the crisis has on her mark. However, if she submits her project
-late, she has some time to recover after the crisis and reduce its
-academic impact. Her payoff is \(a-\beta c -m\) if the lecturer gives
-her a penalty, where \(m\) is the size of the penalty. She gets a payoff
-of \(a-\beta c\) if there is no penalty. \(\beta\) represents the type
-of the student, where a high \(\beta\) suggests a low resiliency to
-crises and a low \(\beta\) suggests a high resiliency and a better
-academic recovery. The student observes her own type but does not know
-the lecturer's type.
+This section presents a model of deadline adherence, with the purpose of
+understanding how a student thinks about assignment submissions, and how
+a lecturer acts when submissions are late. An explanation of the model
+follows. A student receives an assignment, which is due by a certain
+date set by the lecturer. While the student is working on the
+assignment, she experi a crisis and therefore spends less time on the
+assignment. She has two options: she can hand in the assignment on time
+or she can hand in late. If she hands in on time, she will get a payoff
+of \(a-c\), where \(a\) is her potential pre-crisis mark, and \(c\) is
+the negative impact the crisis has on her mark. However, if she submits
+her assignment late, she has some time to recover after the crisis and
+reduce its academic impact. Her payoff is \(a-\beta c -m\) if the
+lecturer gives her a penalty, where \(m\) is the size of the penalty.
+She gets a payoff of \(a-\beta c\) if there is no penalty. \(\beta\)
+represents the type of the student, where a high \(\beta\) suggests a
+low resiliency to crises, and a low \(\beta\) suggests a high resiliency
+and a better academic recovery. The student observes her own type but
+does not know the lecturer's type.
 
 On the other hand, the lecturer is faced with the decision either to
-give a penalty (\(m\)) if a student submits late or not to give a
+give a penalty (\(m\)), if a student submits late, or not to give a
 penalty. If the lecturer gives a penalty, he feels bad since the student
 has gone through a crisis. The size of his disutility depends on the
 size of the penalty (\(m\)) and how empathetic the lecturer is, where
@@ -363,8 +367,10 @@ a crisis, and gets a positive payoff of \(\delta c\). However, the
 lecturer knows that by waving the penalty, he may be encouraging this
 student, and other students to hand in late in the future. The lecturer
 would rather deter late hand-ins, and receives a negative payoff \(-d\)
-for not deterring late hand-ins. This deterrent parameter relates to the
-literature on games of repeated interaction and reputations.
+for not deterring\footnote{This deterrent parameter relates to the
+  literature on games of repeated interaction and reputations
+  (\protect\hyperlink{ref-deter}{Clark \& Montgomery, 1998}).} late
+hand-ins.
 
 The parameters \(a,\, c,\, m\, \&\, d\) are all common knowledge. This
 is a game of incomplete information because the players' types are not
@@ -376,7 +382,7 @@ in extensive form\footnote{The simultaneous form game can be found in
   the appendix, \ref{tab1}}. And a summary of the game's parameters and
 restrictions are given in figure \ref{sum} below.
 
-\includegraphics[scale=1.5]{"img/continuous.jpg"}
+\includegraphics[scale=1]{"img/continuous.jpg"}
 \captionof{figure}{This game is dynamic, where nature first chooses the student's and lecturer's types. The dashed line represents information only known by the lecturer and the solid line represents information only known by the student. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. }
 \label{Figure1}
 
@@ -418,9 +424,9 @@ in on time if \(\beta > \frac{c}{c} \Rightarrow \beta > 1\). Since
 \(\beta\) lies between \(0\) and \(1\), the inequality will never hold
 and she should always hand in late. From an intuitive stand point, this
 makes sense: a student can never do worse by handing in late if there is
-no penalty\footnote{Handing in late is weakly dominant.} but she will do
-better to hand in late if she is resilient in any way (\(\beta < 1\))
-and can partially recover from the crisis.
+no penalty\footnote{Handing in late is a weakly dominant strategy.} but
+she will do better to hand in late if she is resilient in any way
+(\(\beta < 1\)) and can partially recover from the crisis.
 
 However, if the student believes that the lecturer will give a penalty
 with some positive probability (\(p>0\)) then her decision to hand in on
@@ -444,7 +450,7 @@ is more likely to waive the penalty (unless he has very low empathy
 levels).
 
 While the best response analysis is useful, if we want to understand the
-outcome of the game and the player's strategies, we need to solve for
+outcome of the game and the players' strategies, we need to solve for
 the Bayesian Nash Equilibrium (BNE). The full derivations of the
 solution concepts are given in the appendix (\ref{B}).
 
@@ -535,7 +541,9 @@ in touch with their students and would know whether they are
 experiencing a crisis and how impactful the crisis would be, most
 lecturers have too many students to know that information.
 
-Extensions, generality Shortcomings \newpage
+Extensions, generality Shortcomings
+
+\newpage
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -543,6 +551,11 @@ Extensions, generality Shortcomings \newpage
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-deter}{}%
+Clark, B.H. \& Montgomery, D.B. 1998. Deterrence, reputations, and
+competitive cognition. \emph{Management Science}. 44(1):62--82.
+{[}Online{]}, Available: \url{http://www.jstor.org/stable/2634427}.
+
 \leavevmode\hypertarget{ref-power}{}%
 Conrad, C. 1983. Power and performance as correlates of supervisors'
 choice of modes of managing conflict: A preliminary investigation.
@@ -582,6 +595,10 @@ Oxford university press New York.
 Trabelsi, M. 2020. Games with incomplete information: A framework based
 on possibility theory. PhD thesis. Universit{é} de Toulouse,
 Universit{é} Toulouse III-Paul Sabatier.
+
+\leavevmode\hypertarget{ref-von}{}%
+Von Neumann, J. \& Morgenstern, O. 1944. \emph{Theory of games and
+economic behavior}. Princeton University Press.
 
 \end{CSLReferences}
 
