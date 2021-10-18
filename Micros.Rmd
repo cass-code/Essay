@@ -81,9 +81,9 @@ fontsize: 11pt                  # Set fontsize
 linestretch: 1.2                # Set distance between lines.
 link-citations: TRUE            # This creates dynamic links to the papers in reference list.
 
-### Adding additional latex packages:
-# header-includes:
-#    - \usepackage{colortbl} # Add additional packages here.
+Adding additional latex packages:
+ header-includes:
+    - \usepackage{amsmath} # Add additional packages here.
 
 output:
   pdf_document:
@@ -108,7 +108,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width 
 
 The relationship between a supervisor and a subordinate has been studied extensively in the social sciences [@power], [ @comm], [@trust] and it's been found that a subordinate’s action is often influenced by the behaviour of the supervisor. Identity-based motivation theory posits that a relationship of trust and leniency between a subordinate and a supervisor will ultimately lead to both parties being better off in terms of reaching their goals, performance, and mental health [@trust]. Game theory models provide a useful framework to analyze the interactions between a supervisor and a subordinate [@book p.1]. A common situation that arises is a subordinate being assigned a task that should be complete before a deadline. Game theory can offer insights as to when a subordinate should submit a task on time or miss the deadline if there is incomplete information.
 
-This article contributes to the literature on games of incomplete information, and dynamic interactions between students and lecturers. We investigate a case where a student is required to submit an assignment with by a certain deadline, but she experiences a crisis and must choose whether to submit her assignment on time or late. We impose a structure of continuous types for both players, with a discrete set of actions. This essay is organised as follows: section \ref{lit} briefly discusses the literature on games of incomplete information and some applications. Section \ref{game} presents our model of deadline adherence; and section \ref{result} analyses the results of the game. Section \ref{extension} provides an extension of the game and the final section concludes \ref{con}.
+This article contributes to the literature on games of incomplete information, and dynamic interactions between students and lecturers. We investigate a case where a student is required to submit an assignment with by a certain deadline, but she experiences a crisis and must choose whether to submit her assignment on time or late. We impose a structure of continuous types for both players, with a discrete set of actions. This essay is organised as follows: section \ref{lit} briefly discusses the literature on games of incomplete information and some applications. Section \ref{game} presents our model of deadline adherence; and section \ref{result} analyses the results of the game. Section \ref{extension} provides an extension of the game and the final section \ref{con} concludes.
 
 # Games of Incomplete Information \label{lit} 
 
@@ -124,10 +124,11 @@ On the other hand, the lecturer is faced with the decision either to give a pena
 
 The parameters $a,\, c,\, m\, \&\, d$ are all common knowledge. This is a game of incomplete information because the players' types are not common knowledge. The type spaces are continuous and the action spaces are discrete. Each player needs to choose his/her action based on his/her own type, what each believes the other player's type is, and the values of $a,\, c,\, m\, \&\, d$. Figure \ref{Figure1} shows the game in extensive form^[The simultaneous form game can be found in the appendix, \ref{tab1}]. And a summary of the game's parameters and restrictions are given in figure \ref{sum} below.
 
+\begin{center}
 \includegraphics[scale=1]{"img/continuous.jpg"}
 \captionof{figure}{This game is dynamic, where nature first chooses the student's and lecturer's types. The dashed line represents information only known by the lecturer and the solid line represents information only known by the student. Then the student moves, deciding to hand in on time or late after experiencing a crisis. If the student hands in late, the lecturer decides to impose a penalty or not. }
 \label{Figure1}
-
+\end{center}
 
 ```{r sum, results = 'asis', warning=FALSE, message=FALSE, echo=FALSE}
 
@@ -187,11 +188,11 @@ When the lecturer and the student play their equilibrium strategies, neither has
 
 # Extension \label{extension}
 
-We extend the game explained in section \ref{game} to account for grade inflation. The lecturer has an incentive to inflate the marks of the student since a higher grade is associated with the student giving a positive evaluation of the lecturer which could lead to an increase in salary and promotions. However, inflation the mark if ethically wrong therefore the lecturer incurs cost \(\gamma\) if he decides to inflate. If he decides to leave the mark unchanged, then he occurs a sympathy cost \(\delta\). A student experiences a cost of \(\omega\) for asking the lecturer and the lecturer experiences a cost of \(\phi\) of being bothered by the lecturer. 
+We extend the game explained in section \ref{game} to account for grade inflation. The lecturer has an incentive to inflate a students grades higher grade is associated a more favorable evaluation from the student. Favorable evaluations are linked to an in salary and promotions for the lecturer [@2018grades]. However, inflating a grade is ethically wrong therefore the lecturer incurs cost \(\gamma\) if he decides to inflate. If the lecturer, then he occurs a empathy cost \(\delta\)\footnote{The effect of that empathy has on the lecturer payoff has been discussed in details in section \ref{game} and section \ref{result}.}. A student experiences a cost of \(\omega\) for asking the lecturer and the lecturer experiences a cost of \(\phi\) of being bothered by the student . 
 If the lecturer decides not to penalize the student, then he will never choose to inflate a students mark. Knowing this, a student that hands in late and receives no penalty will always accept his mark. If a student hands-on time, a lecture will always leave the mark unchanged at the request of the student, therefore the student will always accept the mark. 
-If the lecturer decides to penalize a late student, the lecturer will choose to inflate a student’s mark if the moral cost is smaller than the empathy cost the lecturer experiences. 
+If the lecturer decides to penalize a late student, the lecturer will choose to inflate a student’s mark if the ethical cost is smaller than the empathy cost the lecturer experiences. 
 \[\gamma < \delta m \]
-If the moral cost that the lecturer experiences is bigger than the empathy cost the lecturer experiences for giving a penalty, then the lecturer is strict, otherwise the lecturer is lenient. Therefore, a strict lecturer will not inflate a student mark but a lenient lecture will. 
+If the ethical that the lecturer experiences is bigger than the empathy cost the lecturer experiences for giving a penalty, then the lecturer is strict, otherwise the lecturer is lenient. Therefore, a strict lecturer will not inflate a student mark but a lenient lecture will [@2010grade]. 
 
 A summary of the game's parameter's and restrictions are shown in table \ref{table:ext} and the game is represented in Figure \ref{fig:extd}
 
@@ -202,7 +203,7 @@ A summary of the game's parameter's and restrictions are shown in table \ref{tab
 Parameter & Explanation & Restrictions \\
 \hline 
 \(\omega\) & Exogenous cost of asking for the lecturer for higher mark & 0 < \(\omega\) $\le$ 1 \\
-\(\delta\) & Ethical cost of inflating students mark & 0 < \(\delta\) $\le$ 1 \\
+\(\gamma\) & Ethical cost of inflating students mark & 0 < \(\delta\) $\le$ 1 \\
 \(\phi\) & Cost of annoyance lecture experience for student bothering him & 0 <\(\phi\) $\le$ 1 \\
 x & Additional marks that student get when lecturer decides to inflates &  1 < x $\le$ 2 \\ [1ex]
 \hline 
@@ -256,6 +257,7 @@ table <- xtable(data, caption = "Strategic form of the game \\label{tab1}")
 # Appendix B \label{B} {-}
 
 ## Payoffs \label{payoff} {-}
+
 
 Student payoffs:
 \begin{align*}

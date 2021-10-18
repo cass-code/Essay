@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.18)  18 OCT 2021 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.18)  18 OCT 2021 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,12 +503,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip74
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 87.
+Package hyperref Info: Option `breaklinks' set `true' on input line 91.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 87.
+(hyperref)                setting the option has no effect on input line 91.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 87.
+Package hyperref Info: Option `colorlinks' set `true' on input line 91.
 
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/siunitx/siunitx.st
 y
@@ -641,24 +641,24 @@ LaTeX Warning: Label `extension' multiply defined.
 )
 \openout1 = `Micros.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
 
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epsto
 pdf-base.sty
@@ -705,7 +705,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 166.
+Package hyperref Info: Link coloring ON on input line 170.
 
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -721,9 +721,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count317
 )
-LaTeX Info: Redefining \ref on input line 166.
-LaTeX Info: Redefining \pageref on input line 166.
-LaTeX Info: Redefining \nameref on input line 166.
+LaTeX Info: Redefining \ref on input line 170.
+LaTeX Info: Redefining \pageref on input line 170.
+LaTeX Info: Redefining \nameref on input line 170.
 (./Micros.out) (./Micros.out)
 \@outlinefile=\write4
 \openout4 = `Micros.out'.
@@ -733,40 +733,40 @@ Package caption Info: End \AtBeginDocument code.
 <Tex/Logo.png, id=52, 225.84375pt x 225.84375pt>
 File: Tex/Logo.png Graphic file (type png)
 <use Tex/Logo.png>
-Package pdftex.def Info: Tex/Logo.png  used on input line 184.
+Package pdftex.def Info: Tex/Logo.png  used on input line 188.
 (pdftex.def)             Requested size: 108.76883pt x 108.76904pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-04.
+08.
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-04.
+08.
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-204.
+208.
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-204.
+208.
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 204.
+(Font)              <10.95> on input line 208.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 204.
+(Font)              <8> on input line 208.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 204.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 204
+(Font)              <6> on input line 208.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 208
 .
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 204
+LaTeX Font Info:    Trying to load font information for U+msb on input line 208
 .
 (c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -780,50 +780,50 @@ x.map} <./Tex/Logo.png>] (./Micros.toc)
 [2
 
 
-] [3]
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 359.
+(Font)              <9> on input line 308.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 359.
-[4]
+(Font)              <5> on input line 308.
+[3] [4]
 <img/continuous.jpg, id=145, 275.01402pt x 318.182pt>
 File: img/continuous.jpg Graphic file (type jpg)
 <use img/continuous.jpg>
-Package pdftex.def Info: img/continuous.jpg  used on input line 379.
-(pdftex.def)             Requested size: 412.52pt x 477.27184pt.
-
-Package caption Warning: \captionsetup{type*=...} or \captionof
-(caption)                outside box or environment on input line 380.
-See the caption package documentation for explanation.
-
+Package pdftex.def Info: img/continuous.jpg  used on input line 386.
+(pdftex.def)             Requested size: 275.01334pt x 318.18123pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 380.
+(caption)                particular \caption on input line 387.
 See the caption package documentation for explanation.
 
 [5 <./img/continuous.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 425--435
+Underfull \hbox (badness 10000) in paragraph at lines 433--443
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 451--453
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
 
  []
 
 [7]
-<img/extend.jpg, id=176, 563.10374pt x 519.1395pt>
+<img/extend.jpg, id=187, 563.10374pt x 519.1395pt>
 File: img/extend.jpg Graphic file (type jpg)
 <use img/extend.jpg>
-Package pdftex.def Info: img/extend.jpg  used on input line 522.
+Package pdftex.def Info: img/extend.jpg  used on input line 532.
 (pdftex.def)             Requested size: 506.7887pt x 467.22122pt.
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 523.
+Package caption Warning: \captionsetup{type*=...} or \captionof
+(caption)                outside box or environment on input line 533.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (23.37654pt too wide) in paragraph at lines 522--523
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 533.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (23.37654pt too wide) in paragraph at lines 532--533
 [][] 
  []
 
@@ -831,8 +831,13 @@ Overfull \hbox (23.37654pt too wide) in paragraph at lines 522--523
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.523 ...s mark or leave the mark unchanged (U). }
-                                                   [9 <./img/extend.JPG>] [10] 
+l.533 ...s mark or leave the mark unchanged (U). }
+                                                   [9 <./img/extend.JPG>] [10]
+Underfull \hbox (badness 5374) in paragraph at lines 599--603
+[][]\T1/lmr/m/n/10.95 Myerson, R.B. 2004. Com-ments on ``games with in-com-plet
+e in-for-ma-tion played by
+ []
+
 [11] [12] [13] [14]
 No file Micros.bbl.
 [15] (./Micros.aux)
@@ -843,13 +848,13 @@ Package rerunfilecheck Info: File `Micros.out' has not changed.
 (rerunfilecheck)             Checksum: 08D4CFD2CC0B4CDAB12D1BF9CBF59908;1631.
  ) 
 Here is how much of TeX's memory you used:
- 15259 strings out of 480559
- 268590 string characters out of 5901779
- 559817 words of memory out of 5000000
- 32568 multiletter control sequences out of 15000+600000
- 459514 words of font info for 65 fonts, out of 8000000 for 9000
+ 15267 strings out of 480559
+ 268680 string characters out of 5901779
+ 559814 words of memory out of 5000000
+ 32569 multiletter control sequences out of 15000+600000
+ 462513 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,16n,80p,542b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,16n,80p,542b,834s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.e
 nc}{c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
 hex.enc}{c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
@@ -872,10 +877,10 @@ esic/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Us
 ers/jesic/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
 c:/Users/jesic/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.p
 fb>
-Output written on Micros.pdf (15 pages, 381501 bytes).
+Output written on Micros.pdf (15 pages, 392498 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
  112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
