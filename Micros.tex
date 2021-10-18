@@ -199,7 +199,7 @@ Adherence\par}}
     {\LARGE \textbf{Cassandra Pengelly - 20346212}\par}
     \vspace{1cm}
 %Date
-    {\large 18 October 2021 \textbar{} Word Count: 1980}
+    {\large 18 October 2021 \textbar{} Word Count: 1998}
 %More
     {\normalsize }
 %More
@@ -258,129 +258,125 @@ Adherence\par}}
 \section{\texorpdfstring{Introduction
 \label{intro}}{Introduction }}\label{introduction}}
 
-The relationship between a supervisor and a subordinate has been studied
-extensively in the social sciences
-(\protect\hyperlink{ref-power}{Conrad, 1983}),
+Various theories of the relationship between lecturer and student show
+that a student's actions are often influenced by the behaviour of their
+lecturer (\protect\hyperlink{ref-power}{Conrad, 1983}),
 (\protect\hyperlink{ref-comm}{Conrad, 1991}),
-(\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}) and it's been found
-that a subordinate's action is often influenced by the behaviour of the
-supervisor. Identity-based motivation theory posits that a relationship
-of trust and leniency between a subordinate and a supervisor will
-ultimately lead to both parties being better off in terms of reaching
-their goals, performance, and mental health
-(\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}). Game theory models
-provide a useful framework to analyze the interactions between a
-supervisor and a subordinate (\protect\hyperlink{ref-book}{Osborne,
-2004: 1}). A common situation that arises is a subordinate being
-assigned a task that should be complete before a deadline. Game theory
-can offer insights as to when a subordinate should submit a task on time
-or miss the deadline if there is incomplete information.
+(\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}). Identity-based
+motivation theory posits that a relationship of trust and leniency
+between student and lecturer causes both to better reach their goals,
+increases performance, and improves mental health
+(\protect\hyperlink{ref-trust}{Liu \& Shi, 2017}). Lecturers often
+require students to complete tasks, including essays, before a deadline.
+Game theoretic models provide a useful framework to analyse the
+interactions between a student and lecturer
+(\protect\hyperlink{ref-book}{Osborne, 2004}) since it offers insights
+into when a student may choose to miss a deadline and when a lecturer
+will give an extension, in the presence of incomplete information.
 
-This article contributes to the literature on games of incomplete
-information, and dynamic interactions between students and lecturers. We
-investigate a case where a student is required to submit an assignment
-with by a certain deadline, but she experiences a crisis and must choose
-whether to submit her assignment on time or late. We impose a structure
-of continuous types for both players, with a discrete set of actions.
-This essay is organised as follows: section \ref{lit} briefly discusses
-the literature on games of incomplete information and some applications.
-Section \ref{game} presents our model of deadline adherence; and section
-\ref{result} analyses the results of the game. Section \ref{extension}
-provides an extension of the game and the final section \ref{con}
-concludes.
+The paper considers the strategic interaction of students and lecturers
+in the context of dynamic games of incomplete information. A student is
+required to submit an assignment with by a certain deadline, but
+experiences a crisis and must choose whether to hand in either on time
+or late. Both players have continuous type spaces and a discrete set of
+actions.
+
+The remainder of the essay is organised as follows. section \ref{lit}
+discusses the literature on games of incomplete information with
+applications. Section \ref{game} presents our model of deadline
+adherence. Section \ref{result} analyses the solutions to the game.
+Section \ref{extension} provides an extension of the game and the final
+section \ref{con} concludes.
 
 \hypertarget{games-of-incomplete-information}{%
 \section{\texorpdfstring{Games of Incomplete Information
 \label{lit}}{Games of Incomplete Information }}\label{games-of-incomplete-information}}
 
-In real-life situations, we often don't have full information before we
-make decisions \protect\hyperlink{ref-2020games}{Trabelsi}
-(\protect\hyperlink{ref-2020games}{2020}).
+When making decisions, agents often do not have full information
+(\protect\hyperlink{ref-2020games}{Trabelsi, 2020}).
 \protect\hyperlink{ref-von}{Von Neumann \& Morgenstern}
 (\protect\hyperlink{ref-von}{1944: 30}) first used the term
-\emph{incomplete information} in reference to a game theory model in
-which parts of the normal form structure are unspecified. However, Von
-Neumann and Morgenstern deemed further research into such a model as
-unimportant (\protect\hyperlink{ref-2004com}{Myerson, 2004}).
+\emph{incomplete information} to describe a model in which parts of the
+normal form structure was unspecified. However, Von Neumann and
+Morgenstern deemed further research into such a model unimportant
+(\protect\hyperlink{ref-2004com}{Myerson, 2004}).
 \protect\hyperlink{ref-luce1956}{Luce \& Adams}
-(\protect\hyperlink{ref-luce1956}{1956}) disagreed, and extended on the
+(\protect\hyperlink{ref-luce1956}{1956}) disagreed and extended on the
 incomplete information literature by assuming that each player has a
-perception\footnote{This belief does not necessarily need to be correct}
-of the payoff function of the other player. However, games of incomplete
-information were practically difficult to solve until
+perception of the payoff function of the other player. A player's
+perception does not have be a true reflection of the other player's
+payoffs, but it forms the basis of the player's strategy.
 \protect\hyperlink{ref-harsanyi}{Harsanyi}
 (\protect\hyperlink{ref-harsanyi}{1995}) developed a general analytical
-framework.
+framework for games of incomplete information, which made it practical
+to solve the games.
 
-We follow the approach of \protect\hyperlink{ref-harsanyi}{Harsanyi}
-(\protect\hyperlink{ref-harsanyi}{1995}) in applying a game-theoretic
-model of incomplete information, where players have less than full
-information about each others payoff functions. Based on the Bayesian
-methodology, both players have expectations in the form of subjective
-probability distributions. Players have different types, which are
-randomly assigned and represent their belief about the game being
-played. However, players do not know the type of the other player
-(\protect\hyperlink{ref-2020games}{Trabelsi, 2020}). Both players
-attempt to estimate the probability of each others types, subject to the
-available information. To solve the outcome of the model, the game of
-incomplete information will be reinterpreted as a game with complete and
-imperfect information, by transforming its basic mathematical structure.
+Following \protect\hyperlink{ref-harsanyi}{Harsanyi}
+(\protect\hyperlink{ref-harsanyi}{1995}) approach, players have less
+than full information about each others payoff functions and, based on
+Bayesian methodology, both players have expectations in the form of
+subjective probability distributions. Both players estimate the
+probability that the other player is of a certain type, subject to the
+available information. To solve the model, the game of incomplete
+information will be reinterpreted as a game with complete and imperfect
+information, through transforming its basic mathematical structure by
+adding nature as a third player.
 
 \hypertarget{a-model-of-deadline-adherence}{%
 \section{\texorpdfstring{A Model of Deadline Adherence
 \label{game}}{A Model of Deadline Adherence }}\label{a-model-of-deadline-adherence}}
 
-This section presents a model of deadline adherence, with the purpose of
-understanding how a student thinks about assignment submissions, and how
-a lecturer acts when submissions are late. An explanation of the model
-follows. A student receives an assignment, which is due by a certain
-date set by the lecturer. While the student is working on the
-assignment, she experi a crisis and therefore spends less time on the
-assignment. She has two options: she can hand in the assignment on time
-or she can hand in late. If she hands in on time, she will get a payoff
-of \(a-c\), where \(a\) is her potential pre-crisis mark, and \(c\) is
-the negative impact the crisis has on her mark. However, if she submits
-her assignment late, she has some time to recover after the crisis and
-reduce its academic impact. Her payoff is \(a-\beta c -m\) if the
-lecturer gives her a penalty, where \(m\) is the size of the penalty.
-She gets a payoff of \(a-\beta c\) if there is no penalty. \(\beta\)
-represents the type of the student, where a high \(\beta\) suggests a
-low resiliency to crises, and a low \(\beta\) suggests a high resiliency
-and a better academic recovery. The student observes her own type but
-does not know the lecturer's type.
+The model of deadline adherence sheds some light on how students think
+about assignment submissions, and how lecturers respond when assignments
+are submitted late. In the model, a student receives an assignment with
+a due date set by the lecturer. While the student is working on the
+assignment, she experiences a crisis and therefore spends less time on
+the assignment. She has two options: she can hand in the assignment on
+time or she can hand in late. If she hands in on time, she will get a
+payoff of \(a-c\), where \(a\) is her potential pre-crisis mark, and
+\(c\) is the negative academic impact of the crisis. Submitting late
+gives the student the opportunity to recover some of the cost of the
+crisis on her final mark. If the lecturer gives her a penalty for late
+submission, her payoff is \(a-\beta c -m\), where \(m\) is the
+percentage point penalty subtracted from her final mark. If the lecturer
+decides the waive the penalty, the student gets a payoff of
+\(a-\beta c\). The parameter \(\beta \in [0,1]\) represents the type of
+the student. A low \(\beta\) suggests a strong academic resiliency,
+whereas a high \(\beta\) suggests low resiliency. The student observes
+her own type but not the lecturer's type. The lecturer decided whether
+to give a penalty, \(m\), if a student submits late. The lecturer has
+disutility from giving a penalty since the student submitted late due to
+a crisis. The magnitude of her disutility depends on the magnitude of
+the penalty, \(m\), , and the lecturer's degree of empathy. The
+parameter \(\delta \in [0,1]\) denotes the lecturer's penalty,
+describing her type. A higher \(\delta\) implies that a lecturer is more
+empathetic. The lecturer observes her own type but not the student's
+type. If the lecturer does not impose a penalty, he derives benefit from
+helping a student through a difficult time academically, yielding the
+payoff \(\delta c\). The lecturer knows that by waving the penalty, he
+may be encouraging this student, and other students to hand in late in
+the future. The lecturer would rather deter late hand-ins, and receives
+a negative payoff \(d\) for not deterring\footnote{This deterrent
+  parameter relates to the literature on games of repeated interaction
+  and reputations (\protect\hyperlink{ref-deter}{Clark \& Montgomery,
+  1998}).} late hand-ins.
 
-On the other hand, the lecturer is faced with the decision either to
-give a penalty (\(m\)), if a student submits late, or not to give a
-penalty. If the lecturer gives a penalty, he feels bad since the student
-has gone through a crisis. The size of his disutility depends on the
-size of the penalty (\(m\)) and how empathetic the lecturer is, where
-the level of empathy describes the lecturer's type (\(\delta\)). The
-more empathetic the lecturer is, the higher \(\delta\) is. The lecturer
-observes his own type but not that of the student. The lecturer's and
-student's types are both continuous types, which are independently and
-randomly chosen by nature at the start of the game from a uniform
-distribution\footnote{A uniform distribution puts equal chance on any of
-  the outcomes between 0 and 1 happening.}: \(\delta \sim Uniform(0,1)\)
-and \(\beta \sim Uniform(0,1)\). If the lecturer decides not to impose a
-penalty, he feels good that he did not impose on a student experiencing
-a crisis, and gets a positive payoff of \(\delta c\). However, the
-lecturer knows that by waving the penalty, he may be encouraging this
-student, and other students to hand in late in the future. The lecturer
-would rather deter late hand-ins, and receives a negative payoff \(-d\)
-for not deterring\footnote{This deterrent parameter relates to the
-  literature on games of repeated interaction and reputations
-  (\protect\hyperlink{ref-deter}{Clark \& Montgomery, 1998}).} late
-hand-ins.
-
-The parameters \(a,\, c,\, m\, \&\, d\) are all common knowledge. This
-is a game of incomplete information because the players' types are not
-common knowledge. The type spaces are continuous and the action spaces
-are discrete. Each player needs to choose his/her action based on
-his/her own type, what each believes the other player's type is, and the
-values of \(a,\, c,\, m\, \&\, d\). Figure \ref{Figure1} shows the game
-in extensive form\footnote{The simultaneous form game can be found in
-  the appendix, \ref{tab1}}. And a summary of the game's parameters and
-restrictions are given in figure \ref{sum} below.
+The lecturer and student both have continuous type spaces, which are
+assumed to be independently and randomly chosen by nature at the start
+of the game from a uniform distribution\footnote{A uniform distribution
+  puts equal chance on any of the outcomes between 0 and 1 happening.
+  Other more realistic probability distributions have been omitted for
+  ease of interpretation. Assuming a normal distribution would give a
+  similar interpretation of how changes in parameters affect the
+  outcomes but would needlessly complicate the game.}:
+\(\delta \sim Uniform(0,1)\) and \(\beta \sim Uniform(0,1)\). The
+parameters \(a,\, c,\, m\, \&\, d\) are all common knowledge. Each
+player needs to choose her action based on her own type, their beliefs
+of the other player's type, and the values of parameters
+\(a,\, c,\, m\, \&\, d\). Figure \ref{Figure1} shows the game in
+extensive form\footnote{The simultaneous form game can be found in the
+  appendix \ref{tab1}} and figure \ref{sum} shows a summary of the
+game's parameters.
 
 \begin{center}
 \includegraphics[scale=1]{"img/continuous.jpg"}
@@ -409,13 +405,13 @@ $a$ & Potential assignment mark & $0\leq a \leq 1$ \\
 \section{\texorpdfstring{Results and Discussion
 \label{result}}{Results and Discussion }}\label{results-and-discussion}}
 
-In order to understand how the lecturer and student will make their
-decisions given their beliefs, we need to solve for their best
-responses. A best response for the student would be to hand in on time
-if the expected payoff from handing in on time is higher than the
-expected payoff of submitting late. Defining \(p\) as the probability
-that the lecturer will give a penalty, a student should hand in on time
-where: \begin{align*}
+We solve for the players' best responses to understand how the lecturer
+and student will make their decisions given their beliefs. The best
+response for the student would be to hand in on time if the expected
+payoff from handing in on time is higher than the expected payoff of
+submitting late. Defining \(p\) as the probability that the lecturer
+will give a penalty, a student should hand in on time where:\\
+\begin{align*}
 \beta>\frac{c-m p}{c}
 \end{align*} The right hand side is a constant\footnote{Since \(c\) and
   \(m\) are known, and \(p\) is a belief the student holds.}. This
@@ -424,37 +420,36 @@ student should hand in on time. If the student believes that the
 lecturer will give no penalty (i.e.~\(p=0\)), then she should only hand
 in on time if \(\beta > \frac{c}{c} \Rightarrow \beta > 1\). Since
 \(\beta\) lies between \(0\) and \(1\), the inequality will never hold
-and she should always hand in late. From an intuitive stand point, this
-makes sense: a student can never do worse by handing in late if there is
-no penalty\footnote{Handing in late is a weakly dominant strategy.} but
-she will do better to hand in late if she is resilient in any way
-(\(\beta < 1\)) and can partially recover from the crisis.
+and she should always hand in late. Intuitively, a student can never do
+worse by handing in late if there is no penalty\footnote{Handing in late
+  is a weakly dominant strategy.} but she will do better to hand in late
+if she is resilient in any way (\(\beta < 1\)) and can partially recover
+from the crisis.
 
 However, if the student believes that the lecturer will give a penalty
 with some positive probability (\(p>0\)) then her decision to hand in on
 time depends on her level of resiliency, the magnitude of the crisis and
 the size of the penalty. As the cost of the crisis increases, the
-threshold value increases (ceteris paribus), and the student becomes
-more likely to hand in late (unless her she has a very low resiliency).
-If the mark penalty is high, the threshold value is smaller, and the
-student is more likely to hand in on time (unless is very resilient:
-\(\beta\) is very low). We can analyse the lecturer's best response rule
-similarly. The lecturer should impose a penalty where:\\
-\begin{align*}
+threshold value increases and the student becomes more likely to hand in
+late, unless her she has a very low resiliency. If the mark penalty is
+high, the threshold value is smaller and the student is more likely to
+hand in on time, unless is very resilient (i.e., \(\beta\) is very low).
+). We analyse the lecturer's best response rule similarly. The lecturer
+should impose a penalty where: \begin{align*}
 \delta<\frac{d}{c+m}
 \end{align*} The threshold value for the lecturer is the ratio between
-the deterrent factor and the sum of the crisis cost and the penalty
-mark. If the deterrent factor is high relative to the cost of crisis and
-the penalty mark, then the lecturer is more likely to give a penalty
-(unless he is highly empathetic). If the cost of the crisis large and
-the mark penalty is high relative to the deterrent factor, the lecturer
-is more likely to waive the penalty (unless he has very low empathy
-levels).
+the deterrent factor and the sum of the cost of the crisis and the
+penalty mark. If the deterrent factor is high relative to the cost of
+crisis and the penalty mark, then the lecturer is more likely to give a
+penalty. If the cost of the crisis large and the mark penalty is high
+relative to the deterrent factor, the lecturer is more likely to give no
+penalty. A highly empathetic lecturer is more likely to waive the
+penalty.
 
-While the best response analysis is useful, if we want to understand the
-outcome of the game and the players' strategies, we need to solve for
-the Bayesian Nash Equilibrium (BNE). The full derivations of the
-solution concepts are given in the appendix (\ref{B}).
+While best response analysis is useful, solving for the Bayesian Nash
+Equilibrium (BNE) is necessary if one wants to understand the outcome of
+the game and the players' strategies. The full derivations of the
+solution concepts can be found in the appendix (\ref{B}).
 
 After observing her private type, the student chooses the following
 hand-in pattern:\\
@@ -472,44 +467,44 @@ s_{\delta}^{*}(\delta)=\left\{\begin{array}{lll}
 \end{array}\right.
 \end{align*}
 
-When the lecturer and the student play their equilibrium strategies,
-neither has an incentive to deviate and we get a Bayesian Nash
-equilibrium. We would interpret the student's BNE strategy similarly to
-her best response; however, her strategy profile only depends on her own
-type and no longer on her beliefs about the lecturer's type. The
-lecturer's best response function and equilibrium strategy profile are
-the same because the lecturer observes whether the student hands in late
-or not and therefore has no need to hold beliefs about when the student
-will hand in.
+When both players play their equilibrium strategies neither has an
+incentive to deviate, resulting in a BNE. We would interpret the
+student's BNE strategy similarly to her best response, however, her
+strategy profile only depends on her own type and no longer on her
+beliefs about the lecturer's type. The lecturer's best response function
+and equilibrium strategy profile are the same because the lecturer
+observes whether the student hands in late or not and therefore has no
+need to hold beliefs about when the student will hand in.
 
 \hypertarget{extension}{%
 \section{\texorpdfstring{Extension
 \label{extension}}{Extension }}\label{extension}}
 
-We extend the game explained in section \ref{game} to account for grade
-inflation. The lecturer has an incentive to inflate a students grades
-higher grade is associated a more favorable evaluation from the student.
-Favorable evaluations are linked to an in salary and promotions for the
-lecturer (\protect\hyperlink{ref-2018grades}{Goswami \& Mumit, 2018}).
-However, inflating a grade is ethically wrong therefore the lecturer
-incurs cost \(\gamma\) if he decides to inflate. If the lecturer, then
-he occurs a empathy cost
-\(\delta\)\footnote{The effect of that empathy has on the lecturer payoff has been discussed in details in section \ref{game} and section \ref{result}.}.
-A student experiences a cost of \(\omega\) for asking the lecturer and
-the lecturer experiences a cost of \(\phi\) of being bothered by the
-student . If the lecturer decides not to penalize the student, then he
-will never choose to inflate a students mark. Knowing this, a student
-that hands in late and receives no penalty will always accept his mark.
-If a student hands-on time, a lecture will always leave the mark
-unchanged at the request of the student, therefore the student will
-always accept the mark. If the lecturer decides to penalize a late
-student, the lecturer will choose to inflate a student's mark if the
-ethical cost is smaller than the empathy cost the lecturer experiences.
-\[\gamma < \delta m \] If the ethical that the lecturer experiences is
-bigger than the empathy cost the lecturer experiences for giving a
-penalty, then the lecturer is strict, otherwise the lecturer is lenient.
-Therefore, a strict lecturer will not inflate a student mark but a
-lenient lecture will (\protect\hyperlink{ref-2010grade}{Franz, 2010}).
+We extend the game above to account for grade inflation. The lecturer
+has an incentive to inflate a student's grade since a higher grade is
+associated a more favorable evaluation from the student. Favorable
+evaluations are linked to an increase in salary and likelihood of
+promotion for the lecturer (\protect\hyperlink{ref-2018grades}{Goswami
+\& Mumit, 2018}). However, inflating a grade is ethically wrong
+therefore the lecturer incurs cost \(\gamma\) if she decides to inflate.
+If the lecturer leaves the mark unchanged, she occurs an empathy cost
+\(\delta\). A student experiences a cost of \(\omega\) for asking the
+lecturer and the lecturer experiences a cost of \(\phi\) of being
+bothered by the student . If the lecturer decides not to penalize the
+student, then he will never choose to inflate a students mark. Knowing
+this, a student that hands in late and receives no penalty will always
+accept his mark. If a student hands in on time, a lecture will always
+leave the mark unchanged at the request of the student, therefore the
+student will always accept the mark. If the lecturer decides to penalize
+a late student, the lecturer will choose to inflate a student's mark if
+the ethical cost is smaller than the empathy cost the lecturer
+experiences;\\
+\[\gamma < \delta m \] If the ethical cost the lecturer experiences is
+larger than the empathy cost the lecturer experiences for giving a
+penalty, then the lecturer is strict. Otherwise, the lecturer is
+lenient. Therefore, a strict lecturer will not inflate a student mark,
+but a lenient lecture will (\protect\hyperlink{ref-2010grade}{Franz,
+2010}).
 
 A summary of the game's parameter's and restrictions are shown in table
 \ref{table:ext} and the game is represented in Figure \ref{fig:extd}
@@ -529,9 +524,11 @@ x & Additional marks that student get when lecturer decides to inflates &  1 < x
 \label{table:ext}
 \end{table}
 
+\begin{center}
 \includegraphics[scale=0.90]{"img/extend.jpg"}
 \captionof{figure}{This is an extended version of the game presented in Figure 3.1. To account for grade inflation, the student gets to accept the grade the lecturer game him, or reject the grade and ask the lecturer for a better mark. The lectuerer can then decided to inflate (I) the students mark or leave the mark unchanged (U). }
 \label{fig:extd}
+\end{center}
 
 \hypertarget{conclusion}{%
 \section{\texorpdfstring{Conclusion
@@ -539,13 +536,23 @@ x & Additional marks that student get when lecturer decides to inflates &  1 < x
 
 The results of the model are intuitive and provide a useful insight into
 how student's think about handing in assignments, and how lecturers
-respond to late submissions. One shortcoming of the model is its
-assumption that \(c\) is common knowledge. Although some lecturers are
-in touch with their students and would know whether they are
-experiencing a crisis and how impactful the crisis would be, most
-lecturers have too many students to know that information.
+respond to late submissions. Whether a lecturer penalizes a student for
+late submission depends largely on the magnitude of the crisis the
+student is facing, relative to the lecturer's own degree of empathy. The
+student chooses whether to hand in late depending on the inconvenience
+to the lecturer, the size of the penalty, the magnitude of the crisis,
+and their ability to bounce back from an academic setback.
 
-Extensions, generality Shortcomings
+One shortcoming of the model is that is assumes c is common knowledge.
+Lecturers often have too many students to have a personal relationship
+with each one to know if they are experiencing a crisis. Another
+shortcoming is that the lecturer's benefit from giving no penalty does
+not account the benefit of no penalty to the student. More resilient
+students would fare well to hand in late since they recover from the
+crisis easily. However, if the lecturer's decision to penalise a student
+also depends on the student's resiliency, it would deter students with
+low resiliency from taking an extension, allowing them to focus on their
+other work due later in the term.
 
 \newpage
 
